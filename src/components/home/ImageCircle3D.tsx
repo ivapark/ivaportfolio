@@ -10,13 +10,13 @@ type Vec3 = { x: number; y: number; z: number };
 type ProjectCard = {
   id: number;
   color: string;
-  label: string;          // project title
-  role: string;           // e.g. "UIUX Designer"
-  description: string;    // paragraph text
-  link: string;           // “Learn more” link
-  imgSrc: string;         // orbit card image
-  heroImgSrc: string;     // big mockup image in modal
-  tools: string[];        // e.g. ["Figma", "FigJam"]
+  label: string;       // project title
+  role: string;        // e.g. "UIUX Designer"
+  description: string; // paragraph text
+  link: string;        // “Learn more” link
+  imgSrc: string;      // orbit card image
+  heroImgSrc: string;  // big mockup image in modal
+  tools: string[];     // e.g. ["Figma", "FigJam"]
 };
 
 function clamp(value: number, min: number, max: number) {
@@ -71,12 +71,15 @@ function getCardRotation(pos: Vec3) {
   return { rotX, rotY };
 }
 
-const ImageCircle3D = () => {
+const ImageCircle3D: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   // rotation of the whole sphere
   const [rotation, setRotation] = useState({ x: -10, y: 0 });
   const [activeProject, setActiveProject] = useState<ProjectCard | null>(null);
+
+  // base path for GitHub Pages ("/ivaportfolio/") or "/" locally
+  const assetBase = import.meta.env.BASE_URL;
 
   const projects: ProjectCard[] = useMemo(
     () =>
@@ -84,8 +87,8 @@ const ImageCircle3D = () => {
         const index = i + 1;
         const hue = (i * (360 / CARD_COUNT)) % 360;
 
-        // you can customize per-project text later
-        const base: ProjectCard = {
+        // you can customize more of these later per project
+        const project: ProjectCard = {
           id: i,
           color: `hsl(${hue}, 70%, 60%)`,
           label:
@@ -98,17 +101,18 @@ const ImageCircle3D = () => {
               ? "Reworked the parent-facing mobile app flows (booking, session tracking, messaging) to reduce confusion and make it easier to manage coaching sessions."
               : "Short description of this project. Replace with real content about your role, process, and impact.",
           link: `/projects/${index}`,
-          imgSrc: `/assets/images/orbit/img${index}.svg`,
-          heroImgSrc: `/assets/images/orbit/img${index}.svg`, // swap to phone mockup if you have a separate asset
+          // IMPORTANT: prefix with assetBase, no leading slash before assets
+          imgSrc: `${assetBase}assets/images/orbit/img${index}.svg`,
+          heroImgSrc: `${assetBase}assets/images/orbit/img${index}.svg`,
           tools:
             index === 1
               ? ["Figma", "FigJam"]
               : ["Figma"],
         };
 
-        return base;
+        return project;
       }),
-    []
+    [assetBase]
   );
 
   const positions = useMemo(() => computeRingPositions(RADIUS), []);
@@ -214,7 +218,10 @@ const ImageCircle3D = () => {
             <div className="orbit-modal-grid">
               {/* LEFT: text block */}
               <div className="orbit-modal-left">
-                <h2 className="orbit-modal-title">{activeProject.label}</h2>
+                <h2 className="orbit-modal-title">
+                  {activeProject.label}
+                </h2>
+
                 <div className="orbit-modal-role">
                   {activeProject.role}
                 </div>
