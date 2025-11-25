@@ -8,6 +8,8 @@
   position: relative;
   background: #ffffff;
   perspective: 800px;
+  font-family: var(--font-body);  /* <— Inria Sans */
+
 }
 
 /* 3D container */
@@ -91,39 +93,82 @@
   text-align: center;
 }
 
-/* overlay when a project is selected */
+/* === OVERLAY BACKDROP FADE-IN === */
 .orbit-overlay {
-  position: fixed; /* cover viewport */
+  position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 50;
-  backdrop-filter: blur(4px);
+
+  /* backdrop */
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(6px);
+
+  /* start transparent, fade in */
+  opacity: 0;
+  animation: orbitOverlayFade 220ms ease-out forwards;
+  z-index: 30;
 }
 
-/* modal card container */
+@keyframes orbitOverlayFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === MODAL CARD SLIDE + SCALE === */
 .orbit-modal {
-  position: relative;
-  width: min(1000px, 92vw);
-  max-height: 80vh;
-  background: #ffffff;
-  border-radius: 32px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-  padding: 40px 48px;
-  overflow: hidden;
+  max-width: 700px;
+  width: min(90vw, 880px);
+  border-radius: 24px;
+  padding: 68px 42px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #fff;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.65);
+
+  /* smooth entrance */
+  opacity: 0;
+  transform: translateY(16px) scale(0.96);
+  animation: orbitModalIn 260ms cubic-bezier(0.16, 0.72, 0.2, 1) 40ms forwards;
+
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
 }
 
-/* grid: text left, image right */
+@keyframes orbitModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* keep your existing grid/layout styles, just make sure they
+   don’t override opacity/transform/animation above */
 .orbit-modal-grid {
   display: grid;
-  grid-template-columns: 3fr 2.2fr;
-  gap: 32px;
-  width: 100%;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+  gap: 24px;
 }
+
+@media (max-width: 768px) {
+  .orbit-modal {
+    padding: 20px 18px;
+    border-radius: 18px;
+  }
+
+  .orbit-modal-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 
 /* close button (X) top-right of card */
 .orbit-modal-close {
@@ -181,7 +226,7 @@
   border: 1px solid #d4d4d8;
   font-size: 14px;
   color: #111827;
-  background: #f9fafb;
+  background: #ffffff;
 }
 
 /* Learn More text button */

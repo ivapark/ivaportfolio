@@ -1,22 +1,19 @@
 // src/components/home/ImageCircle3D.tsx
 import React, { useRef, useEffect, useState, useMemo } from "react";
 import "./ImageCircle3D.css";
+import {
+  PROJECTS,
+  ProjectCard as ProjectData,
+} from "../../data/projects";
 
-const CARD_COUNT = 12;
 const RADIUS = 300;
 
 type Vec3 = { x: number; y: number; z: number };
 
-type ProjectCard = {
-  id: number;
-  color: string;
-  label: string;       // project title
-  role: string;        // e.g. "UIUX Designer"
-  description: string; // paragraph text
-  link: string;        // “Learn more” link
-  imgSrc: string;      // orbit card image
-  heroImgSrc: string;  // big mockup image in modal
-  tools: string[];     // e.g. ["Figma", "FigJam"]
+// Local type = data from projects.ts + resolved image URLs
+type OrbitProject = ProjectData & {
+  imgSrc: string;
+  heroImgSrc: string;
 };
 
 function clamp(value: number, min: number, max: number) {
@@ -76,42 +73,20 @@ const ImageCircle3D: React.FC = () => {
 
   // rotation of the whole sphere
   const [rotation, setRotation] = useState({ x: -10, y: 0 });
-  const [activeProject, setActiveProject] = useState<ProjectCard | null>(null);
+  const [activeProject, setActiveProject] =
+    useState<OrbitProject | null>(null);
 
   // base path for GitHub Pages ("/ivaportfolio/") or "/" locally
   const assetBase = import.meta.env.BASE_URL;
 
-  const projects: ProjectCard[] = useMemo(
+  // Take data from PROJECTS and resolve proper asset URLs
+  const projects: OrbitProject[] = useMemo(
     () =>
-      Array.from({ length: CARD_COUNT }, (_, i) => {
-        const index = i + 1;
-        const hue = (i * (360 / CARD_COUNT)) % 360;
-
-        // you can customize more of these later per project
-        const project: ProjectCard = {
-          id: i,
-          color: `hsl(${hue}, 70%, 60%)`,
-          label:
-            index === 1
-              ? "MissPoppins App Redesign"
-              : `Project ${index}`,
-          role: index === 1 ? "UIUX Designer" : "Designer",
-          description:
-            index === 1
-              ? "Reworked the parent-facing mobile app flows (booking, session tracking, messaging) to reduce confusion and make it easier to manage coaching sessions."
-              : "Short description of this project. Replace with real content about your role, process, and impact.",
-          link: `/projects/${index}`,
-          // IMPORTANT: prefix with assetBase, no leading slash before assets
-          imgSrc: `${assetBase}assets/images/orbit/img${index}.svg`,
-          heroImgSrc: `${assetBase}assets/images/orbit/img${index}.svg`,
-          tools:
-            index === 1
-              ? ["Figma", "FigJam"]
-              : ["Figma"],
-        };
-
-        return project;
-      }),
+      PROJECTS.map((p) => ({
+        ...p,
+        imgSrc: `${assetBase}${p.imgPath}`,
+        heroImgSrc: `${assetBase}${(p.heroImgPath ?? p.imgPath)}`,
+      })),
     [assetBase]
   );
 
@@ -130,7 +105,7 @@ const ImageCircle3D: React.FC = () => {
 
       setRotation((prev) => ({
         x: clamp(prev.x + deltaY * 0.2, -80, 80), // up/down tilt
-        y: prev.y + deltaX * 0.2,                 // left/right spin
+        y: prev.y + deltaX * 0.2, // left/right spin
       }));
     };
 
@@ -148,6 +123,7 @@ const ImageCircle3D: React.FC = () => {
         }}
       >
         {projects.map((project, idx) => {
+          // assuming positions.length >= projects.length
           const pos = positions[idx];
           const cardRot = getCardRotation(pos);
 
