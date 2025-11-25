@@ -1,0 +1,28 @@
+// tsconfig.app.json
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+  
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],
+  
+      // ✅ use node resolution (your TS version doesn’t know "bundler")
+      "moduleResolution": "node",
+  
+      // ✅ needed so `import React from "react"` works
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+  
+      // ✅ React JSX runtime
+      "jsx": "react-jsx",
+  
+      // ✅ make sure React types are loaded so JSX.IntrinsicElements has `div`, `img`, etc.
+      "types": ["vite/client", "react", "react-dom"],
+  
+      "strict": true,
+      "skipLibCheck": true,
+      "noEmit": true
+    },
+    "include": ["src"]
+  }
+  

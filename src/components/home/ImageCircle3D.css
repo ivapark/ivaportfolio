@@ -1,0 +1,237 @@
+/* src/components/home/ImageCircle3D.css */
+
+
+.orbit-root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+  perspective: 800px;
+}
+
+/* 3D container */
+.orbit-3d-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* card is a 3D object on the sphere */
+.orbit-card-wrapper {
+  position: absolute;
+  width: 240px;
+  height: 200px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+/* 3D card with two faces */
+.orbit-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
+
+/* face & back share same styling */
+.orbit-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden; 
+}
+
+/* what you see when you're "outside" */
+.orbit-card-face {
+  /* no extra rotation */
+}
+
+/* what you see when you're "inside" */
+
+
+.orbit-card-wrapper:hover .orbit-card {
+  transform: scale(1.08);
+}
+
+/* image fills the face */
+.orbit-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* hint text at bottom */
+.orbit-hint {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.orbit-hint-text {
+  text-align: center;
+}
+
+/* overlay when a project is selected */
+.orbit-overlay {
+  position: fixed; /* cover viewport */
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+/* modal card container */
+.orbit-modal {
+  position: relative;
+  width: min(1000px, 92vw);
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  padding: 40px 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+/* grid: text left, image right */
+.orbit-modal-grid {
+  display: grid;
+  grid-template-columns: 3fr 2.2fr;
+  gap: 32px;
+  width: 100%;
+}
+
+/* close button (X) top-right of card */
+.orbit-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  color: #111827;
+}
+
+/* left column */
+.orbit-modal-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.orbit-modal-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #111827;
+}
+
+.orbit-modal-role {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.orbit-modal-body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* tools chips */
+.orbit-modal-tools {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.orbit-chip {
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid #d4d4d8;
+  font-size: 14px;
+  color: #111827;
+  background: #f9fafb;
+}
+
+/* Learn More text button */
+.orbit-modal-learn {
+  margin-top: 28px;
+  align-self: flex-start;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #111827;
+  padding: 0;
+}
+
+/* right column: mockup image */
+.orbit-modal-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit-modal-hero {
+  max-width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 840px) {
+  .orbit-modal {
+    padding: 28px 20px 24px;
+    border-radius: 24px;
+  }
+
+  .orbit-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .orbit-modal-right {
+    justify-content: center;
+  }
+
+  .orbit-modal-title {
+    font-size: 22px;
+  }
+
+  .orbit-modal-body {
+    font-size: 14px;
+  }
+}
