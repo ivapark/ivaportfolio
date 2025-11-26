@@ -25,13 +25,15 @@
     font-size: 22px;
     font-weight: 100;
     font-family: var(--font-body);  /* <— Inria Sans */
+    text-decoration: none; 
+    color: #000; 
 
   }
   
   .site-header__nav {
     display: flex;
     gap: 32px;
-    font-weight: 100px;
+    font-weight: 100;
     font-family: var(--font-body);  /* <— Inria Sans */
 
 

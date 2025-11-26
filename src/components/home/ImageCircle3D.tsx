@@ -72,7 +72,7 @@ const ImageCircle3D: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   // rotation of the whole sphere
-  const [rotation, setRotation] = useState({ x: -10, y: 0 });
+  const [rotation, setRotation] = useState({ x: 0, y: 45 });
   const [activeProject, setActiveProject] =
     useState<OrbitProject | null>(null);
 
@@ -132,11 +132,10 @@ const ImageCircle3D: React.FC = () => {
               key={project.id}
               className="orbit-card-wrapper"
               style={{
-                transform: `translate3d(${pos.x}px, ${pos.y}px, ${
-                  pos.z
-                }px) rotateY(${cardRot.rotY + 180}deg) rotateX(${
-                  cardRot.rotX
-                }deg)`,
+                transform: `translate3d(${pos.x}px, ${pos.y}px, ${pos.z}px)
+                rotateY(${cardRot.rotY+180 }deg)
+                rotateX(${cardRot.rotX}deg)`,
+
               }}
               onClick={() => {
                 console.log("CLICK", project.id, project.label);

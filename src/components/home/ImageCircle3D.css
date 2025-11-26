@@ -38,6 +38,8 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.2s ease-out;
+  border-radius: 18px;
+
 }
 
 /* face & back share same styling */
@@ -46,7 +48,6 @@
   inset: 0;
   border-radius: 18px;
   overflow: hidden;
-  border: 3px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   background: #ffffff;
   display: flex;
@@ -57,6 +58,10 @@
 
 /* what you see when you're "outside" */
 .orbit-card-face {
+  transform: rotateY(180deg);
+  
+
+
   /* no extra rotation */
 }
 
@@ -65,6 +70,7 @@
 
 .orbit-card-wrapper:hover .orbit-card {
   transform: scale(1.08);
+  
 }
 
 /* image fills the face */
@@ -73,6 +79,8 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 18px;
+
 }
 
 /* hint text at bottom */

@@ -86,29 +86,32 @@ export const PROJECTS: ProjectCard[] = [
   },
   {
     id: 5,
+
+    color: "hsl(60, 70%, 60%)",
+    label: "Iva Park",
+    role: "Product Designer · Researcher",
+    description:
+      "",
+    link: "/projects/band", //will have to fix later
+    imgPath: "assets/images/orbit/img6.svg",
+    heroImgPath: "assets/images/orbit/img6.svg",
+    tools: [],
+    category: "hobby",
+  },
+  {
+    id: 6,
     color: "hsl(40, 70%, 60%)",
     label: "ASL Alphabet Detector",
     role: "Developer · UX",
     description:
       "Full-stack ASL alphabet recognizer with a CNN backend and a web UI for live webcam prediction and history.",
     link: "/projects/asl-alphabet",
-    imgPath: "assets/images/orbit/img6.svg",
-    heroImgPath: "assets/images/orbit/img6.svg",
-    tools: ["TensorFlow", "Flask", "MongoDB"],
-    category: "project",
-  },
-  {
-    id: 6,
-    color: "hsl(20, 70%, 60%)",
-    label: "ASL Video Call (GestureTalk)",
-    role: "Product Designer · Frontend",
-    description:
-      "Real-time video calling app that layers ASL gesture recognition and live captions on top of WebRTC meetings.",
-    link: "/projects/asl-call",
     imgPath: "assets/images/orbit/img7.svg",
     heroImgPath: "assets/images/orbit/img7.svg",
-    tools: ["React", "WebRTC", "Socket.io"],
+    tools: ["TensorFlow", "Flask", "MongoDB"],
     category: "project",
+
+
   },
   {
     id: 7,
@@ -126,7 +129,7 @@ export const PROJECTS: ProjectCard[] = [
   {
     id: 8,
     color: "hsl(330, 70%, 60%)",
-    label: "Nerofilm – Photobooth Landing Page",
+    label: "Nerofilm – Virtual Photobooth",
     role: "UI/UX Designer",
     description:
       "Vintage photobooth-inspired landing page with textured visuals and film-style interactions.",
@@ -139,20 +142,20 @@ export const PROJECTS: ProjectCard[] = [
   {
     id: 9,
     color: "hsl(120, 70%, 60%)",
-    label: "Computer Vision HW1",
+    label: "Detecting Objects using Bipartite Matching",
     role: "Computer Vision",
     description:
       "Implemented classical CV pipelines from scratch, including filtering, edge detection, and basic recognition.",
     link: "/projects/cv-hw1",
     imgPath: "assets/images/orbit/img10.svg",
     heroImgPath: "assets/images/orbit/img10.svg",
-    tools: ["Python", "NumPy", "OpenCV"],
+    tools: ["Python", "PyTorch"],
     category: "project",
   },
   {
     id: 10,
     color: "hsl(0, 70%, 60%)",
-    label: "Computer Vision HW2",
+    label: "Electric Guitarist",
     role: "Computer Vision",
     description:
       "Extended the toolkit with feature extraction, matching, and deep learning experiments for image classification.",
@@ -160,21 +163,22 @@ export const PROJECTS: ProjectCard[] = [
     imgPath: "assets/images/orbit/img11.svg",
     heroImgPath: "assets/images/orbit/img11.svg",
     tools: ["Python", "PyTorch"],
-    category: "project",
+    category: "hobby",
   },
 
   // ========== HOBBIES ==========
   {
     id: 11,
-    color: "hsl(60, 70%, 60%)",
-    label: "Band – Guitar & Songwriting",
-    role: "Guitarist · Songwriter",
+    color: "hsl(20, 70%, 60%)",
+    label: "ASL Video Call (GestureTalk)",
+    role: "Product Designer · Frontend",
     description:
-      "Play electric guitar in a band, write original songs, and perform live sets that influence how I think about liveness in design.",
-    link: "/projects/band",
+      "Real-time video calling app that layers ASL gesture recognition and live captions on top of WebRTC meetings.",
+    link: "/projects/asl-call",
     imgPath: "assets/images/orbit/img12.svg",
     heroImgPath: "assets/images/orbit/img12.svg",
-    tools: ["Electric Guitar", "Ableton"],
-    category: "hobby",
+    tools: ["React", "WebRTC", "Socket.io"],
+    category: "project",
+ 
   },
 ];
