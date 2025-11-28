@@ -142,7 +142,10 @@ const ImageCircle3D: React.FC = () => {
                 setActiveProject(project);
               }}
             >
-              <div className="orbit-card">
+              <div className="orbit-card"
+              style={{ animationDelay: `${idx * 80}ms` }}
+              >
+                
                 {/* Front face (outward) */}
                 <div className="orbit-card-face">
                   <img

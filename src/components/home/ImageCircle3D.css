@@ -40,6 +40,21 @@
   transition: transform 0.2s ease-out;
   border-radius: 18px;
 
+  opacity: 0;
+  animation-name: orbitCardIn;
+  animation-duration: 600ms;
+  animation-timing-function: cubic-bezier(0.16, 0.72, 0.2, 1);
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes orbitCardIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* face & back share same styling */
@@ -54,17 +69,12 @@
   align-items: center;
   justify-content: center;
   backface-visibility: hidden; 
+
 }
 
-/* what you see when you're "outside" */
-.orbit-card-face {
+.orbit-card-back {
   transform: rotateY(180deg);
-  
-
-
-  /* no extra rotation */
 }
-
 /* what you see when you're "inside" */
 
 

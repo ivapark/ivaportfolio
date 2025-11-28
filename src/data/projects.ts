@@ -1,6 +1,6 @@
 // src/data/projects.ts
 
-export type ProjectCategory = "experience" | "project" | "hobby";
+export type ProjectCategory = "experience" | "project" | "hobby" | "me";
 
 export type ProjectCard = {
   id: number;
@@ -50,7 +50,7 @@ export const PROJECTS: ProjectCard[] = [
     role: "UIUX Designer",
     description:
       "Reworked the parent-facing mobile app flows for booking, messaging, and tracking sessions to reduce confusion and support busy parents.",
-    link: "/projects/misspoppins-app",
+    link: "/projects/MissPoppinsApp",
     imgPath: "assets/images/orbit/img3.svg",
     heroImgPath: "assets/images/orbit/img3.svg",
     tools: ["Figma", "Fig Jam"],
@@ -96,7 +96,7 @@ export const PROJECTS: ProjectCard[] = [
     imgPath: "assets/images/orbit/img6.svg",
     heroImgPath: "assets/images/orbit/img6.svg",
     tools: [],
-    category: "hobby",
+    category: "me",
   },
   {
     id: 6,
