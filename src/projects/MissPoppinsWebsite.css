@@ -1,0 +1,561 @@
+/* GLOBAL FONT */
+body {
+    font-family: "Kufam", sans-serif !important;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+
+  }
+  
+  /* Optional page wrapper */
+  .mp-page {
+    background-color: #fff;
+  }
+  
+  /* VIDEO STYLE */
+  .mp-video {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* TYPOGRAPHY SCALE */
+  .mp-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 52px !important;
+    font-weight: 400;
+    color: #4f0d81;
+    width: 400%;
+  }
+  
+  .mp-subtitle {
+    font-size: 32px !important;
+    font-weight: 300 !important;
+    margin-bottom: 3.5rem;
+    color: #000;
+  }
+  
+  .mp-main-text {
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    font-family: "Inria Sans", sans-serif;
+  }
+  
+  .mp-small-text {
+    font-size: 16px;
+    font-weight: 300 !important;
+  }
+  
+  /* Hero layout container */
+  .mp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 4rem 6rem;
+    max-width: 1200px;
+    margin: -10px auto;
+    background-color: #fff;
+  }
+  
+  /* Text section */
+  .mp-text-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-top: 0;
+  }
+  
+  .mp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-top: 0rem;
+  }
+  
+  .mp-info-line {
+    font-weight: lighter;
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  
+  .mp-info-line span {
+    font-weight: normal;
+  }
+  
+  /* Image section */
+  .mp-image-section {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 240px;
+    max-width: 500px !important;
+  }
+  
+  /* Image styling */
+  .mpd-hero-image,
+  .mp-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Competitive Analysis Section */
+  .analysis-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 4rem;
+  }
+  
+  .analysis-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 1200px;
+  }
+  
+  /* Left image */
+  .analysis-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Right text */
+  .a-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .a-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #4f0d81;
+    margin: 0 0 2rem 0;
+  }
+  
+  .a-description {
+    font-size: 18px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    color: #333;
+    max-width: 550px;
+    line-height: 1.7;
+  }
+  
+  /* Layout Section (Home / Visualization / Professional / Hooker) */
+  .layout-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 4rem;
+  }
+  
+  .layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    max-width: 1200px;
+  }
+  
+  /* Left text */
+  .layout-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .layout-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #4f0d81;
+    margin: 0 0 2rem 0;
+  }
+  
+  .layout-description {
+    font-size: 18px;
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 300;
+    color: #333;
+    max-width: 550px;
+    line-height: 1.7;
+  }
+  
+  /* Right image */
+  .layout-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    border: 0.5px solid rgb(218, 218, 218);
+  }
+  
+  /* Improvement Section */
+  .improvement-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 4rem;
+  }
+  
+  .improvement-container {
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .improvement-text {
+    margin-bottom: 4rem;
+    text-align: left;
+  }
+  
+  .improvement-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #4f0d81;
+    margin: 0;
+  }
+  
+  /* Grid layout */
+  .improvement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .improvement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .improvement-number {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-size: 80px;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .improvement-subtitle {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  
+  .improvement-description {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.6;
+    max-width: 230px;
+  }
+  
+  /* Mission Section */
+  .mission-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 4rem;
+  }
+  
+  .mission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .mission-text {
+    margin-left: 2rem;
+  }
+  
+  .m-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-size: 48px;
+    color: #4f0d81;
+    margin: 0 0 2rem 0;
+  }
+  
+  .m-bold {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.6;
+  }
+  
+  .m-description {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Mission images */
+  .mission-images {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6rem;
+    margin-left: 2rem;
+  }
+  
+  .m-image {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Competitor Mission / Visual Sections */
+  .competitormission-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 4rem;
+  }
+  
+  .competitormission-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .competitormission-text {
+    text-align: left;
+  }
+  
+  .competitormission-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: lighter;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #4f0d81;
+    margin: 0;
+  }
+  
+  .competitormission-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .competitormission-image img {
+    width: 800px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Visualization image (generic) */
+  .visualization-image img {
+    width: 700px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* FINAL PRODUCT SECTION */
+  .final-product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 4rem;
+    background: #fff;
+  }
+  
+  .final-product-container {
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .fp-title {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    font-size: 48px;
+    color: #4f0d81;
+    margin: 0 0 3.5rem 0;
+  }
+  
+  /* LABELS ROW */
+  .fp-labels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    margin-bottom: 1.5rem;
+  }
+  
+  .fp-label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    color: #000;
+    margin: 0;
+  }
+  
+  .fp-label-left {
+    text-align: center;
+  }
+  
+  .fp-label-right {
+    text-align: center;
+  }
+  
+  /* GRID: BEFORE / AFTER */
+  .fp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+  
+  /* BEFORE COLUMN */
+  .fp-before {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fp-before-img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+  }
+  
+  /* AFTER COLUMN */
+  .fp-after {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .fp-phone {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* RESPONSIVE BREAKPOINTS */
+  @media (max-width: 1024px) {
+    .fp-label {
+      font-size: 44px;
+    }
+    .fp-before-img {
+      width: 360px;
+    }
+  }
+  
+  /* Responsive for analysis/layout sections */
+  @media (max-width: 950px) {
+    .analysis-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+  
+    .a-title {
+      font-size: 40px;
+    }
+  
+    .analysis-image img {
+      width: 100%;
+      max-width: 500px;
+    }
+  
+    .a-description {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .layout-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 4rem;
+    }
+  
+    .layout-title {
+      font-size: 40px;
+    }
+  
+    .layout-description {
+      margin: 0 auto;
+      max-width: 90%;
+    }
+  
+    .layout-image img {
+      max-width: 450px;
+    }
+  
+    .visualization-image img {
+      max-width: 100%;
+    }
+  
+    .mission-images {
+      flex-direction: column;
+      margin-left: 0;
+    }
+  
+    .m-image {
+      width: 100%;
+      max-width: 500px;
+    }
+  
+    .competitormission-image img {
+      width: 100%;
+      max-width: 800px;
+    }
+  }
+  
+  /* Responsive for improvement grid */
+  @media (max-width: 1000px) {
+    .improvement-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+  
+    .improvement-number {
+      font-size: 64px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .improvement-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .improvement-item {
+      max-width: 80%;
+    }
+  }
+  

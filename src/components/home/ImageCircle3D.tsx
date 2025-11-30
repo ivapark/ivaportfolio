@@ -5,6 +5,7 @@ import {
   PROJECTS,
   ProjectCard as ProjectData,
 } from "../../data/projects";
+import { useNavigate } from "react-router-dom";
 
 const RADIUS = 300;
 
@@ -70,6 +71,7 @@ function getCardRotation(pos: Vec3) {
 
 const ImageCircle3D: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();  
 
   // rotation of the whole sphere
   const [rotation, setRotation] = useState({ x: 0, y: 45 });
@@ -174,8 +176,8 @@ const ImageCircle3D: React.FC = () => {
           <span className="orbit-hint-text">
             Scroll with two fingers & Click a project to learn more
             <br />
-            <span style={{ marginLeft: 32 }}>
-              Website coded with React + Typescript!
+            <span style={{ marginLeft: 24 }}>
+              I coded the website using React + Typescript!
             </span>
           </span>
         </div>
@@ -218,15 +220,20 @@ const ImageCircle3D: React.FC = () => {
                   </div>
                 )}
 
-                <button
-                  type="button"
-                  className="orbit-modal-learn"
-                  onClick={() => {
-                    window.location.href = activeProject.link;
-                  }}
-                >
-                  Learn More →
-                </button>
+                    <button
+                    type="button"
+                    className="orbit-modal-learn"
+                    onClick={() => {
+                        if (activeProject) {
+                        navigate(activeProject.link);  // "/projects/…"
+                        setActiveProject(null);        // optional: close modal
+                        }
+                    }}
+                    >
+                    Learn More →
+                    </button>
+
+                
               </div>
 
               {/* RIGHT: hero image / phone mockup */}

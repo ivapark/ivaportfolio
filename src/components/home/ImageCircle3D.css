@@ -37,25 +37,31 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.2s ease-out;
   border-radius: 18px;
 
+  /* smooth intro */
   opacity: 0;
+  transform: translate3d(0, 24px, -60px) scale(0.94);
   animation-name: orbitCardIn;
-  animation-duration: 600ms;
+  animation-duration: 800ms;
   animation-timing-function: cubic-bezier(0.16, 0.72, 0.2, 1);
   animation-fill-mode: forwards;
-
 }
 
+/* smoother fade + slide + depth */
 @keyframes orbitCardIn {
   from {
     opacity: 0;
+    transform: translate3d(0, 32px, -80px) scale(0.9);
+    filter: blur(6px);
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
   }
 }
+
 
 /* face & back share same styling */
 .orbit-card-face {

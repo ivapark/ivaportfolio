@@ -1,0 +1,444 @@
+.about-page {
+  background: #ffffff;
+  min-height: 120vh;
+  font-family: var(
+    --font-body,
+    system-ui,
+    -apple-system,
+    "SF Pro Text",
+    "Helvetica Neue",
+    Arial,
+    sans-serif
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* hero container */
+.about-hero {
+  max-width: 1124px;
+  margin: 0 auto;
+
+  /* give some top space for the fixed header, but reduce overall height */
+  padding: 140px 80px 120px;
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* when component mounts */
+.about-hero--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* elements inside hero: start hidden & slide up with stagger */
+.role-line,
+.hi,
+.description,
+.hero-footer {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+/* keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* simple fade (no movement) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* staggered timings once hero is visible */
+.about-hero--visible .role-line {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.05s;
+}
+
+.about-hero--visible .hi {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.15s;
+}
+
+.about-hero--visible .description {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.about-hero--visible .hero-footer {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.45s;
+}
+
+/* text block */
+.intro-text {
+  text-align: left;
+}
+
+/* top line */
+.role-line {
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
+  letter-spacing: 0.3px;
+  margin-bottom: 18px;
+}
+
+/* big “Hi, I’m Iva” */
+.hi {
+  font-size: clamp(52px, 6vw, 72px);
+  font-weight: 300;
+  color: #363c90;
+  margin: 0 0 24px 0;
+}
+
+/* description */
+.description {
+  max-width: 1000px;
+  font-size: 40px;
+  line-height: 1.45;
+  font-weight: 300;
+  color: #111;
+  margin: 0 0 32px 0;
+}
+
+/* icons + Learn More row */
+.hero-footer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* left icons */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-icon {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* right “Learn More” link */
+.learn-more {
+  margin-left: auto;
+  font-size: 32px;
+  color: #363c90;
+  text-decoration: none;
+  font-weight: 300;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.learn-more:hover {
+  opacity: 0.6;
+  transform: translateX(6px);
+}
+
+/* --- ABOUT ME SECTION --- */
+
+.about-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 180px 0 260px;
+
+  /* gradient background like the mockup */
+  background: radial-gradient(
+      130% 180% at 15% 0%,
+      #ffffff 0%,
+      #dbe4ff 35%,
+      #95a8ff 70%,
+      #5a6fea 100%
+    );
+}
+
+.about-section-inner {
+  max-width: 1124px;
+  width: 100%;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+/* text column */
+.about-copy {
+  max-width: 420px; /* a bit wider */
+}
+
+/* start hidden for staggered text + image */
+.about-copy h2,
+.about-copy p,
+.about-photo {
+  opacity: 0;
+}
+
+/* text also starts slightly below for fadeUp */
+.about-copy h2,
+.about-copy p {
+  transform: translateY(16px);
+}
+
+/* stagger: title -> p1 -> p2 -> image */
+.about-section--visible .about-copy h2 {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.05s;
+}
+
+.about-section--visible .about-copy p:nth-of-type(1) {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.22s;
+}
+
+.about-section--visible .about-copy p:nth-of-type(2) {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.39s;
+}
+
+/* bigger typography */
+.about-copy h2 {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0 0 22px 0;
+  color: #000;
+}
+
+.about-copy p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgb(103, 101, 101);
+  margin: 0 0 10px 0;
+}
+
+/* image column */
+.about-photo-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 540px;
+  border-radius: 0;
+  transform-origin: center;
+  filter: drop-shadow(0 48px 70px rgba(0, 0, 0, 0.55));
+}
+
+/* image: fade only, no movement */
+.about-section--visible .about-photo {
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .about-hero {
+    padding: 160px 24px 80px;
+  }
+
+  .hero-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .learn-more {
+    margin-left: 0;
+  }
+
+  .about-section {
+    padding: 120px 0 140px;
+  }
+
+  .about-section-inner {
+    padding: 0 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .about-copy {
+    max-width: 100%;
+  }
+
+  .about-photo-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-photo {
+    max-width: 480px;
+  }
+}
+
+
+
+/* --- SKILLS SECTION --- */
+
+.skills-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 220px 0 240px;
+  background: radial-gradient(
+      140% 200% at 10% 0%,
+      #ffffff 0%,
+      #f9c2e4 35%,
+      #f38caf 60%,
+      #f06d8a 80%,
+      #fef3ff 100%
+    );
+}
+
+.skills-inner {
+  max-width: 1124px;
+  width: 100%;
+  padding: 0 80px;
+  display: flex;
+  /* OLD: justify-content: space-between; gap: 120px; */
+  justify-content: center;
+  column-gap: 160px;
+}
+
+/* columns */
+.skills-column {
+  /* OLD: flex: 1; */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centers heading + grid */
+}
+
+/* headings */
+.skills-heading {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: center;   /* center over the grid */
+  color: #111;
+}
+
+/* grid of icons */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 160px));
+  gap: 32px 64px;       /* a bit tighter so the block feels compact */
+  justify-items: center; /* center each card within the grid cells */
+}
+
+
+/* individual skill */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  object-fit: contain;
+}
+
+.skill-card-label {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* CTA */
+.skills-cta {
+  display: inline-block;
+  margin-top: 120px;
+  margin-right: 80px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.skills-cta:hover {
+  opacity: 0.7;
+  transform: translateX(6px);
+}
+
+
+/* --- SKILLS ANIMATION --- */
+
+/* start hidden */
+.skills-heading,
+.skills-grid {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.skills-section--visible .skills-heading {
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.05s;
+}
+
+.skills-section--visible .skills-grid {
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* remove the .skills-section--visible .skills-cta animation rule entirely */
+
+
+
+/* responsive */
+@media (max-width: 900px) {
+  .skills-section {
+    padding: 120px 0 140px;
+  }
+
+  .skills-inner {
+    padding: 0 24px;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 32px 48px;
+  }
+
+  .skills-cta {
+    margin-top: 40px;
+  }
+}

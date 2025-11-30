@@ -1,0 +1,275 @@
+.mlweb-page {
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* TYPOGRAPHY SCALE */
+  .mlweb-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700;
+    color: #C535A1;
+    width: 900px;
+  }
+  
+  .mlweb-subtitle {
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    margin-bottom: 3.5rem;
+    color: #000;
+  }
+  
+  .mlweb-main-text {
+    font-size: 20px !important;
+    font-weight: 300 !important;
+  }
+  
+  .mlweb-main-text1 {
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    font-family: "Inria Sans", sans-serif !important;
+  }
+  
+  /* LAYOUT */
+  .mlweb-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 9rem;
+    background-color: white;
+    min-height: 100vh;
+    margin-bottom: -200px;
+    margin-top: 100px; /* space for fixed site header */
+  }
+  
+  /* TEXT SECTION */
+  .mlweb-text-section {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: -280px;
+  }
+  
+  .mlweb-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+    width: 700px;
+  }
+  
+  .mlweb-info-line {
+    font-weight: lighter;
+    max-width: 80%;
+    font-size: 20px !important;
+  }
+  
+  /* IMAGE SECTION */
+  .mlweb-image-section {
+    flex-shrink: 0;
+    max-width: 650px !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 220px !important;
+    margin-top: -130px !important;
+  }
+  
+  .mlweb-main-img {
+    width: 100%;
+    max-width: 650px !important;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 220px !important;
+    margin-top: -70px !important;
+  }
+  
+  /* ABOUT THE PROJECT */
+  .mlweb-about-section {
+    padding: 6rem 9rem;
+    background-color: #fff;
+  }
+  
+  .mlweb-title1 {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 500;
+    color: #C535A1;
+  }
+  
+  .mlweb-about-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .mlweb-about-body {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: "Inria Sans", sans-serif;
+    color: #333333;
+    line-height: 1.8;
+  }
+  
+  .mlweb-about-body p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mlweb-about-list-intro {
+    margin-bottom: 0.75rem;
+  }
+  
+  .mlweb-about-list {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #333333;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* HOW IS THE MODEL BUILT */
+  .mlweb-model-section {
+    padding: 5rem 9rem 4rem;
+    background-color: #fff;
+  }
+  
+  .mlweb-model-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .mlweb-model-body {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: "Inria Sans", sans-serif;
+    color: #333333;
+    line-height: 1.8;
+  }
+  
+  .mlweb-model-body p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* DEMO */
+  .mlweb-demo-section {
+    padding: 5rem 9rem 4rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .mlweb-demo-text {
+    margin-top: 1.25rem;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Inria Sans", sans-serif;
+    color: #333333;
+  }
+  
+  .mlweb-demo-frame {
+    margin: 3rem auto 2rem;
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+  .mlweb-demo-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  /* DEMO BUTTONS */
+  .mlweb-demo-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+  
+  .mlweb-demo-button {
+    background-color: #e6b5e1;
+    color: #ffffff;
+    padding: 0.9rem 2.7rem;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Kufam", sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    display: inline-block;
+  }
+  
+  .mlweb-demo-button:hover {
+    background-color: #d092cc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1024px) {
+    .mlweb-container {
+      flex-direction: column;
+      padding: 3rem 2rem;
+      margin-bottom: 0;
+    }
+  
+    .mlweb-text-section {
+      max-width: 100%;
+      margin-top: 0;
+    }
+  
+    .mlweb-title {
+      width: 100%;
+      font-size: 2rem !important;
+    }
+  
+    .mlweb-info {
+      width: 100%;
+    }
+  
+    .mlweb-image-section {
+      margin-right: 0 !important;
+      margin-top: 2rem !important;
+      max-width: 100%;
+    }
+  
+    .mlweb-main-img {
+      margin-right: 0 !important;
+      margin-top: 0 !important;
+    }
+  
+    .mlweb-about-section,
+    .mlweb-model-section,
+    .mlweb-demo-section,
+    .mlweb-whatidid-section {
+      padding: 3rem 2rem;
+    }
+  
+    .mlweb-whatidid-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mlweb-title {
+      font-size: 1.75rem !important;
+    }
+  
+    .mlweb-subtitle {
+      font-size: 1.25rem !important;
+    }
+  
+    .mlweb-demo-buttons {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  

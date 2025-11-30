@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./MissPoppinsApp.css";
 
+
 const base = import.meta.env.BASE_URL;
 const affinityImages = [
   base + "assets/misspoppinsapp/image3.svg",

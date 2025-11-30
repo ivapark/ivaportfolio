@@ -1,0 +1,245 @@
+.vr-page {
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  /* HERO TYPOGRAPHY */
+  .vr-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700;
+    color: #a04668;
+    max-width: 700px;
+  }
+  
+  .vr-subtitle {
+    font-family: "Inria Sans", sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 400;
+    color: #a04668;
+    margin-top: 0.75rem;
+    margin-bottom: 3rem;
+  }
+  
+  .vr-italic {
+    font-style: italic;
+  }
+  
+  .vr-main-text {
+    font-family: "Inria Sans", sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    color: #111111;
+  }
+  
+  .vr-info-label {
+    font-weight: 600;
+  }
+  
+  /* HERO LAYOUT */
+  .vr-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 9rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .vr-text-section {
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vr-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 650px;
+  }
+  
+  .vr-info-line {
+    line-height: 1.7;
+  }
+  
+  /* HERO IMAGE SIDE */
+  .vr-image-section {
+    flex-shrink: 0;
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .vr-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+  
+  /* ABOUT SECTION */
+  .vr-about-section {
+    padding: 5rem 9rem 4rem;
+    background-color: #ffffff;
+  }
+  
+  .vr-about-heading {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .vr-about-content {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .vr-about-text {
+    max-width: 620px;
+    font-family: "Inria Sans", sans-serif;
+    color: #343434;
+    line-height: 1.8;
+  }
+  
+  .vr-body-text {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  
+  .vr-about-img-wrapper {
+    flex-shrink: 0;
+    max-width: 320px;
+  }
+  
+  .vr-about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    margin-top: 150px;
+  }
+  
+  /* WHAT I DID */
+  .vr-what-section {
+    padding: 4rem 9rem 6rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .vr-what-heading {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 2.5rem;
+  }
+  
+  .vr-what-body {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+  
+  .vr-what-list {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    font-family: "Inria Sans", sans-serif !important;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #444444;
+  }
+  
+  /* BUTTON */
+  .vr-github-button-wrapper {
+    text-align: center;
+  }
+  
+  .vr-github-button {
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    border-radius: 12px;
+    background-color: #e7b3c9;
+    color: #ffffff;
+    font-family: "Kufam", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  
+  .vr-github-button:hover {
+    background-color: #d18eac;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1200px) {
+    .vr-hero {
+      padding: 4rem 4rem;
+    }
+  
+    .vr-about-section,
+    .vr-what-section {
+      padding: 4rem 4rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .vr-hero {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 3rem 2rem;
+    }
+  
+    .vr-text-section {
+      max-width: 100%;
+      margin-bottom: 2.5rem;
+    }
+  
+    .vr-image-section {
+      max-width: 100%;
+      justify-content: center;
+    }
+  
+    .vr-main-img {
+      max-width: 650px;
+    }
+  
+    .vr-title {
+      font-size: 2rem !important;
+    }
+  
+    .vr-subtitle {
+      font-size: 1.25rem !important;
+    }
+  
+    .vr-about-section,
+    .vr-what-section {
+      padding: 3rem 2rem;
+    }
+  
+    .vr-about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .vr-about-text {
+      max-width: 100%;
+    }
+  
+    .vr-about-img-wrapper {
+      max-width: 320px;
+    }
+  }
+  

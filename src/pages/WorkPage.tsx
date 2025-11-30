@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from "react";
 import "./WorkPage.css";
 import { PROJECTS, ProjectCategory } from "../data/projects";
+import { Link } from "react-router-dom";
 
 type FilterKey = "all" | ProjectCategory;
 
@@ -19,10 +20,12 @@ const WorkPage: React.FC = () => {
 
   const projects = useMemo(
     () =>
-      PROJECTS.map((p) => ({
-        ...p,
-        heroImgSrc: `${assetBase}${p.heroImgPath ?? p.imgPath}`,
-      })),
+      PROJECTS
+        .filter((p) => p.category !== "me") // hide "me" cards from Work page
+        .map((p) => ({
+          ...p,
+          heroImgSrc: `${assetBase}${p.heroImgPath ?? p.imgPath}`,
+        })),
     [assetBase]
   );
 
@@ -36,7 +39,6 @@ const WorkPage: React.FC = () => {
 
   return (
     <main className="work-page">
-      {/* Accessible title, can be visually subtle or hidden if you want */}
       <h1 className="work-page__title">Work</h1>
 
       {/* Filter tabs */}
@@ -58,8 +60,15 @@ const WorkPage: React.FC = () => {
 
       {/* Cards grid */}
       <section className="work-page__grid">
-        {filteredProjects.map((project) => (
-          <article key={project.id} className="work-card">
+        {filteredProjects.map((project, index) => (
+          <article
+            key={`${project.id}-${activeFilter}`} 
+            className="work-card work-card--enter"
+            style={{
+              // stagger: 0s, 0.06s, 0.12s, ...
+              animationDelay: `${index * 0.06}s`,
+            }}
+          >
             <header className="work-card__header">
               <h2 className="work-card__title">{project.label}</h2>
               <p className="work-card__role">{project.role}</p>
@@ -81,14 +90,18 @@ const WorkPage: React.FC = () => {
                   </span>
                 ))}
               </div>
-              <button
-                type="button"
-                className="work-card__link"
-                onClick={() => (window.location.href = project.link)}
-              >
-                View case study →
-              </button>
             </footer>
+
+            <div className="work-card__overlay">
+              <div className="work-card__overlay-inner">
+                <p className="work-card__overlay-description">
+                  {project.description}
+                </p>
+                <Link to={project.link} className="work-card__overlay-link">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
           </article>
         ))}
       </section>

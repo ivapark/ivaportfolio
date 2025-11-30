@@ -1,0 +1,227 @@
+.nerofilm-page {
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* TYPOGRAPHY */
+  .nerofilm-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700;
+    color: #8a4f1f; /* warm brown */
+    width: 900px;
+  }
+  
+  .nerofilm-subtitle {
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    margin-bottom: 3.5rem;
+    color: #8a4f1f;
+  }
+  
+  .nerofilm-main-text {
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    font-family: "Inria Sans", sans-serif !important;
+  }
+  
+  /* LAYOUT – matching MBTI Ramen structure */
+  .nerofilm-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 3rem 12rem 5rem;
+    background-color: #ffffff;
+  
+    margin-top: 80px; /* space for fixed header */
+    min-height: auto;
+  }
+  
+  .nerofilm-text-section {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .nerofilm-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+    width: 700px;
+  }
+  
+  .nerofilm-info-line {
+    max-width: 80%;
+  }
+  
+  /* IMAGE SECTION */
+  .nerofilm-image-section {
+    flex-shrink: 0;
+    max-width: 450px !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nerofilm-main-img {
+    width: 100%;
+    max-width: 650px !important;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 320px; /* same vertical alignment as MBTI Ramen */
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .nerofilm-container {
+      flex-direction: column;
+      padding: 3rem 2rem;
+      margin-top: 80px;
+      min-height: auto;
+    }
+  
+    .nerofilm-text-section {
+      max-width: 100%;
+    }
+  
+    .nerofilm-title {
+      width: 100%;
+      font-size: 2rem !important;
+    }
+  
+    .nerofilm-info {
+      width: 100%;
+    }
+  
+    .nerofilm-image-section {
+      margin-top: 2rem !important;
+      max-width: 100%;
+      justify-content: center;
+    }
+  
+    .nerofilm-main-img {
+      max-width: 520px !important;
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nerofilm-title {
+      font-size: 1.75rem !important;
+    }
+  
+    .nerofilm-subtitle {
+      font-size: 1.25rem !important;
+    }
+  }
+  
+
+  /* --- ABOUT THE PROJECT SECTION --- */
+
+.nerofilm-section-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 500;
+    text-align: center;
+    color: #111;
+    margin-bottom: 3rem;
+  }
+  
+  .nerofilm-about-section {
+    padding: 5rem 9rem 6rem;
+    background-color: #ffffff;
+  }
+  
+  .nerofilm-about-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 56px;
+    align-items: center;
+  }
+  
+  .nerofilm-about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  .nerofilm-about-text {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .nerofilm-about-text p + p {
+    margin-top: 1.25rem;
+  }
+  
+  /* buttons row */
+  .nerofilm-about-buttons {
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+  
+  .nerofilm-about-btn {
+    min-width: 190px;
+    text-align: center;
+    padding: 0.85rem 2.5rem;
+    border-radius: 12px;
+    background-color: #e6c8b5;
+    color: #5a4636;
+    font-family: "Kufam", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease;
+  }
+  
+  .nerofilm-about-btn:hover {
+    background-color: #d7b29a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* responsive */
+  @media (max-width: 1024px) {
+    .nerofilm-about-section {
+      padding: 3.5rem 2rem 4rem;
+    }
+  
+    .nerofilm-about-inner {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      max-width: 640px;
+    }
+  
+    .nerofilm-about-image {
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nerofilm-section-title {
+      font-size: 28px !important;
+    }
+  
+    .nerofilm-about-buttons {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .nerofilm-about-btn {
+      width: 100%;
+      max-width: 240px;
+    }
+  }
+  

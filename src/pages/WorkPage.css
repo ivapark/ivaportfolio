@@ -1,6 +1,8 @@
 /* src/pages/WorkPage.css */
 
-.work-page {
+/* PAGE LAYOUT
+   ------------------------------------------- */
+   .work-page {
     max-width: 1160px;
     margin: 0 auto;
     padding: 120px 40px 80px; /* top accounts for fixed header */
@@ -15,7 +17,8 @@
     color: #111;
   }
   
-  /* Filter tabs row */
+  /* FILTER TABS
+     ------------------------------------------- */
   .work-page__filters {
     display: flex;
     gap: 24px;
@@ -47,23 +50,59 @@
     background: #111;
   }
   
-  /* Grid of cards */
+  /* GRID
+     ------------------------------------------- */
   .work-page__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 32px;
   }
   
-  /* Card */
+  /* CARD BASE + ANIMATION
+     ------------------------------------------- */
   .work-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    padding: 32px 32px 24px;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
-    border-radius: 24px;
-    border: 1px solid #e2e2e2;
-    padding: 28px 32px 20px;
-    background: #fff;
+  
+    /* start hidden; animation will bring it in */
+    opacity: 0;
+    transform: translateY(14px);
   }
   
+  /* staggered entrance; delay is set inline in TSX */
+  .work-card--enter {
+    animation-name: workCardIn;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes workCardIn {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* CONTENT INSIDE CARD (used for blur on hover) */
+  .work-card__content {
+    position: relative;
+    z-index: 1;
+    transition: filter 0.28s ease, transform 0.28s ease;
+  }
+  
+  /* HEADER
+     ------------------------------------------- */
   .work-card__header {
     margin-bottom: 24px;
   }
@@ -80,24 +119,30 @@
     margin: 0;
   }
   
-  /* Image area */
+  /* IMAGE AREA
+     ------------------------------------------- */
   .work-card__media {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 24px;
+    margin: 32px 0 24px;
+    border-radius: 20px;
+    overflow: hidden;
   }
   
   .work-card__image {
-    max-width: 260px;
-    max-height: 260px;
     width: 100%;
+    max-width: 400px;
+    max-height: 360px;
     object-fit: contain;
-    border-radius: 16px;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.3s ease;
   }
   
-  /* Footer: tags + link */
+  /* FOOTER: TAGS + LINK
+     ------------------------------------------- */
   .work-card__footer {
     border-top: 1px solid #e8e8e8;
     padding-top: 14px;
@@ -128,5 +173,59 @@
     cursor: pointer;
     color: #111;
     white-space: nowrap;
+  }
+  
+  /* HOVER OVERLAY (DESCRIPTION + LEARN MORE)
+     ------------------------------------------- */
+  .work-card__overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(68, 68, 68, 0.88); /* you can swap to purple/blue gradient */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 36px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.28s ease, transform 0.28s ease;
+  }
+  
+  .work-card__overlay-inner {
+    max-width: 420px;
+  }
+  
+  .work-card__overlay-description {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 28px 0;
+  }
+  
+  .work-card__overlay-link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .work-card__overlay-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* HOVER STATE
+     ------------------------------------------- */
+  .work-card:hover .work-card__overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .work-card:hover .work-card__content {
+    filter: blur(1px) brightness(0.7);
+  }
+  
+  .work-card:hover .work-card__image {
+    transform: scale(1.03);
   }
   

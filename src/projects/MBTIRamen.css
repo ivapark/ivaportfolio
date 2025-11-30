@@ -1,0 +1,329 @@
+.mbti-page {
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* TYPOGRAPHY */
+  .mbti-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700;
+    color: #c67b4f; /* warm ramen tone */
+    width: 900px;
+  }
+  
+  .mbti-subtitle {
+    font-size: 24px !important;
+    font-weight: 300 !important;
+    margin-bottom: 3.5rem;
+    color: #c67b4f;
+  }
+  
+  .mbti-main-text {
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    font-family: "Inria Sans", sans-serif !important;
+  }
+  
+  /* LAYOUT */
+  .mbti-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    /* was: padding: 5rem 9rem; */
+    padding: 3rem 12rem 5rem;
+  
+    background-color: #ffffff;
+  
+    /* you can keep a small margin for the fixed header */
+    margin-top: 80px; /* or 60px, whatever matches your header height */
+  
+    /* remove this so it doesn't push everything down */
+    min-height: auto;
+  }
+  
+  
+  .mbti-text-section {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .mbti-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 10px;
+    width: 700px;
+  }
+  
+  .mbti-info-line {
+    max-width: 80%;
+  }
+  
+  /* IMAGE SECTION */
+  .mbti-image-section {
+    flex-shrink: 0;
+    max-width: 450px !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .mbti-main-img {
+    width: 100%;
+    max-width: 650px !important;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 320px;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .mbti-container {
+      flex-direction: column;
+      padding: 3rem 2rem;
+      margin-top: 80px;
+      min-height: auto;
+    }
+  
+    .mbti-text-section {
+      max-width: 100%;
+    }
+  
+    .mbti-title {
+      width: 100%;
+      font-size: 2rem !important;
+    }
+  
+    .mbti-info {
+      width: 100%;
+    }
+  
+    .mbti-image-section {
+      margin-top: 2rem !important;
+      max-width: 100%;
+      justify-content: center;
+    }
+  
+    .mbti-main-img {
+      max-width: 520px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mbti-title {
+      font-size: 1.75rem !important;
+    }
+  
+    .mbti-subtitle {
+      font-size: 1.25rem !important;
+    }
+  }
+  
+
+  /* --- SHARED SECTION TITLE --- */
+
+.mbti-section-title {
+    font-family: "Kufam", sans-serif !important;
+    font-size: 36px !important;
+    font-weight: 500;
+    text-align: center;
+    color: #111;
+    margin-bottom: 3rem;
+  }
+  
+  /* --- ABOUT THE PROJECT --- */
+  
+  .mbti-about-section {
+    padding: 5rem 9rem 4rem;
+    background-color: #ffffff;
+  }
+  
+  .mbti-about-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    column-gap: 48px;
+    align-items: flex-start;
+  }
+  
+  .mbti-about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  .mbti-about-text {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333333;
+  }
+  
+  .mbti-about-text p + p {
+    margin-top: 1.25rem;
+  }
+  
+  /* --- QUIZ LOGIC SECTION --- */
+  
+  .mbti-logic-section {
+    padding: 5rem 9rem 4rem;
+    background-color: #ffffff;
+  }
+  
+  .mbti-logic-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.9fr);
+    column-gap: 48px;
+    align-items: flex-start;
+  }
+  
+  .mbti-logic-text {
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333333;
+  }
+  
+  .mbti-logic-text p {
+    margin-bottom: 1rem;
+  }
+  
+  .mbti-logic-text ul {
+    margin: 0 0 1.25rem 1.5rem;
+    padding: 0;
+  }
+  
+  .mbti-logic-text li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .mbti-logic-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 280px;
+  }
+  
+  /* --- RESULT SECTION --- */
+  
+  .mbti-result-section {
+    padding: 5rem 9rem 6rem;
+    background-color: #ffffff;
+    text-align: left;
+  }
+  
+  .mbti-result-body {
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333333;
+  }
+  
+  .mbti-result-body p {
+    margin-bottom: 1rem;
+  }
+  
+  .mbti-result-body > ul {
+    margin: 0 0 1.5rem 1.5rem;
+  }
+  
+  .mbti-ramen-examples {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+  
+  .mbti-ramen-examples li {
+    margin-bottom: 1.3rem;
+  }
+  
+  /* CTA BUTTONS */
+  
+  .mbti-result-buttons {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .mbti-cta-button {
+    background-color: #f4b597;
+    color: #ffffff;
+    padding: 0.9rem 2.7rem;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Kufam", sans-serif;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease;
+    display: inline-block;
+  }
+  
+  .mbti-cta-button--secondary {
+    background-color: #c67b4f;
+  }
+  
+  .mbti-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    background-color: #e89b73;
+  }
+  
+  .mbti-cta-button--secondary:hover {
+    background-color: #b1653b;
+  }
+  
+  /* --- RESPONSIVE --- */
+  
+  @media (max-width: 1024px) {
+    .mbti-about-section,
+    .mbti-logic-section,
+    .mbti-result-section {
+      padding: 3.5rem 2rem;
+    }
+  
+    .mbti-about-inner,
+    .mbti-logic-inner {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  
+    .mbti-about-image {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+  
+    .mbti-logic-image {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mbti-section-title {
+      font-size: 28px !important;
+    }
+  
+    .mbti-result-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mbti-cta-button {
+      width: 100%;
+      max-width: 260px;
+      text-align: center;
+    }
+  }
+  

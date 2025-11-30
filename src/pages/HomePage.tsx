@@ -1,7 +1,7 @@
 // src/pages/HomePage.tsx
 import * as React from "react";
 import ImageCircle3D from "../components/home/ImageCircle3D";
-import "../styles/HomePage.css";
+import "./HomePage.css";
 
 const HomePage: React.FC = () => {
   return (
