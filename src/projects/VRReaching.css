@@ -13,7 +13,7 @@
   }
   
   .vr-subtitle {
-    font-family: "Inria Sans", sans-serif !important;
+    font-family: "Kufam", sans-serif !important;
     font-size: 24px !important;
     font-weight: 400;
     color: #a04668;
@@ -21,12 +21,10 @@
     margin-bottom: 3rem;
   }
   
-  .vr-italic {
-    font-style: italic;
-  }
+ 
   
   .vr-main-text {
-    font-family: "Inria Sans", sans-serif !important;
+    font-family: "Kufam", sans-serif !important;
     font-size: 20px !important;
     font-weight: 300 !important;
     color: #111111;
@@ -77,6 +75,7 @@
     height: auto;
     border-radius: 24px;
     object-fit: cover;
+    margin-top: 200px;
   }
   
   /* ABOUT SECTION */

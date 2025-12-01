@@ -16,6 +16,8 @@ import BipartitieMatching from "./projects/BipartiteMatching";
 import VRReaching from "./projects/VRReaching";
 import MBTIRamen from "./projects/MBTIRamen";
 import NeroFilm from "./projects/NeroFilm";
+import ProjectCrescendo from "./projects/ProjectCrescendo";
+
 
 
 
@@ -45,12 +47,10 @@ const App: React.FC = () => {
         <Route path="/projects/VRReaching" element={<VRReaching />} />
         <Route path="/projects/MBTIRamen" element={<MBTIRamen />} />
         <Route path="/projects/NeroFilm" element={<NeroFilm />} />
-
-
+        <Route path="/projects/ProjectCrescendo" element={<ProjectCrescendo />} />
 
 
         {/* later:
-        <Route path="/about" element={<AboutPage />} />
         <Route path="/resume" element={<ResumePage />} />
         */}
       </Routes>

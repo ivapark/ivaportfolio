@@ -114,7 +114,7 @@ const BipartiteMatching: React.FC = () => {
         {/* BUTTON */}
         <div className="bip-about-button-wrapper">
           <a
-            href="https://github.com/your-repo-here" // TODO: replace with your repo
+            href="https://github.com/ivapark/bipartitematching" 
             target="_blank"
             rel="noopener noreferrer"
             className="bip-about-button"

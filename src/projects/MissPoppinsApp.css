@@ -18,7 +18,7 @@ body {
   .mp-title {
     font-family: "Kufam", sans-serif !important;
     font-size: 52px !important;
-    font-weight: 400;
+    font-weight: 700;
     color: #4f0d81;
   }
   
@@ -26,13 +26,15 @@ body {
     font-size: 32px !important;
     font-weight: 300 !important;
     margin-bottom: 3.5rem;
-    color: #000;
+    color: #4f0d81 !important;
+    font-family: "Kufam", sans-serif !important;
+
   }
   
   .mp-main-text {
     font-size: 24px !important;
     font-weight: 300 !important;
-    font-family: "Inria Sans", sans-serif;
+    font-family: "Kufam", sans-serif !important;
   }
   
   .mp-small-text {
@@ -350,7 +352,26 @@ body {
     color: #7f7b82;
     line-height: 1.7;
     width: 600px;
+    justify-content: center !important;
+    align-items: center !important;
+
   }
+  /* Research Findings – center the post-it */
+  .mp-finding-postit-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 3rem auto 0;  /* centers the container itself */
+  }
+
+  .mp-finding-postit1 {
+    display: block;
+    width: 260px;       /* tweak size if you want it bigger/smaller */
+    max-width: 100%;
+    height: auto;
+  }
+
   
   /* User Interviews */
   .mp-user-interviews-section {

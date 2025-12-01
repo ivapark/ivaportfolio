@@ -153,12 +153,17 @@ const MLweb: React.FC = () => {
           a short demo of the words the model can currently recognize!
         </p>
 
-        <div className="mlweb-demo-frame">
-          <video className="mlweb-demo-video" controls>
-            <source src={base + "/assets/MLweb/MLweb.MOV"} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+      
+
+          <div className="mlweb-video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/rQKAEKkvzWI"
+              title="ASL Video Call Demo"
+              frameBorder={0}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
 
         <div className="mlweb-demo-buttons">
           <a

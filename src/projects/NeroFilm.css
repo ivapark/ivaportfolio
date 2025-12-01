@@ -17,12 +17,14 @@
     font-weight: 300 !important;
     margin-bottom: 3.5rem;
     color: #8a4f1f;
+    font-family: "Kufam", sans-serif !important;
+
   }
   
   .nerofilm-main-text {
     font-size: 20px !important;
     font-weight: 300 !important;
-    font-family: "Inria Sans", sans-serif !important;
+    font-family: "Kufam", sans-serif !important;
   }
   
   /* LAYOUT – matching MBTI Ramen structure */

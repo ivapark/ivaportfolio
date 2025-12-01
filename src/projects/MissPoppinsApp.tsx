@@ -355,13 +355,14 @@ const MissPoppinsApp: React.FC = () => {
           </h3>
         </div>
 
-        <div className="mp-finding-body">
-          <img
-            src= {base+ "/assets/misspoppinsapp/researchfindings1.svg"}
-            alt="Finding Insight"
-            className="mp-finding-postit1"
-          />
-        </div>
+        <div className="mp-finding-postit-wrapper">
+        <img
+          src={base + "/assets/misspoppinsapp/researchfindings1.svg"}
+          alt="Finding Insight"
+          className="mp-finding-postit1"
+        />
+      </div>
+
       </section>
 
       {/* Research Finding 2 */}

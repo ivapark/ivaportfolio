@@ -4,45 +4,41 @@ import "./MissPoppinsWebsite.css";
 
 const MissPoppinsWebsite: React.FC = () => {
   const base = import.meta.env.BASE_URL;
-
   return (
-    <main className="mp-page">
-      {/* Hero Section */}
-      <section className="mp-container">
-        <div className="mp-text-section">
-          <h1 className="mp-title">MissPoppins Website Redesign: </h1>
-          <h2 className="mp-subtitle">Enhancing User Engagement</h2>
+    <main className="mpw-page">
+      {/* HERO */}
+      <section className="mpw-hero">
+        <div className="mpw-text-section">
+          <h1 className="mpw-title">MissPoppins Website Redesign:</h1>
 
-          <div className="mp-info">
-            <p className="mp-main-text mp-info-line">
-              <span style={{ fontWeight: 500 }}>Overview:</span>
-              <span className="mp-main-text">
-                {" "}
-                Conducted a SWOT analysis and enhanced the website engagement
-              </span>
+          <h2 className="mpw-subtitle">
+          Enhancing User Engagement 
+          </h2>
+
+          <div className="mpw-info">
+            <p className="mpw-main-text vr-info-line">
+              <span className="mpw-info-label">Overview:&nbsp;</span>
+              Conducted a SWOT analysis and enhanced the website engagement
+
             </p>
-            <p className="mp-main-text mp-info-line">
-              <span style={{ fontWeight: 500 }}>Role:</span>
-              <span className="mp-main-text">
-                {" "}
-                UX Researcher, UX/UI Designer
-              </span>
+
+            <p className="mpw-main-text vr-info-line">
+              <span className="mpw-info-label">Role:&nbsp;</span>
+              UX Researcher, UX/UI Designer
             </p>
-            <p className="mp-main-text mp-info-line">
-              <span style={{ fontWeight: 500 }}>Toolkit:</span>
-              <span className="mp-main-text">
-                {" "}
-                Figma, FigJam, Pencil and Paper
-              </span>
+
+            <p className="mpw-main-text vr-info-line">
+              <span className="mpw-info-label">Toolkit:&nbsp;</span>
+              Figma, FigJam, Pencil and Paper
             </p>
           </div>
         </div>
 
-        <div className="mp-image-section">
+        <div className="mpw-image-section">
           <img
-            src={base + "/assets/misspoppinswebiste/mw3.svg"}
-            alt="Dashboard Preview"
-            className="mpd-hero-image"
+            src={base + "/assets/misspoppinswebsite/misspoppinswebsitemain.svg"} // hero image
+            alt="misspoppinswebsitemain"
+            className="mpw-main-img"
           />
         </div>
       </section>

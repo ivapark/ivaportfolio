@@ -191,13 +191,13 @@ const MBTIRamen: React.FC = () => {
 
         <div className="mbti-result-buttons">
           <a
-            href="#"
+            href="https://github.com/ivapark/MBTIramen"
             className="mbti-cta-button"
           >
             View My Github
           </a>
           <a
-            href="#"
+            href="https://ivapark.github.io/MBTIramen/"
             className="mbti-cta-button mbti-cta-button--secondary"
           >
             Take the Quiz!

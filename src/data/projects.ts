@@ -23,7 +23,7 @@ export const PROJECTS: ProjectCard[] = [
     label: "VR Reaching Research (NYU Vision & Action Lab)",
     role: "Research Assistant",
     description:
-      "Built VR tasks with penalty zones to study how people plan and control reaches under risk, running thousands of trials per participant.",
+      "Built VR tasks with penalty zones to study how people plan and control reaches under risk.",
     link: "/projects/VRReaching",
     imgPath: "assets/images/orbit/img1.svg",
     heroImgPath: "assets/images/orbit/img1.svg",
@@ -78,7 +78,7 @@ export const PROJECTS: ProjectCard[] = [
     role: "Organizer · Designer",
     description:
       "Co-ran music sessions for students with disabilities and designed lightweight logistics flows for guardians and volunteers.",
-    link: "/projects/project-crescendo",
+    link: "/projects/ProjectCrescendo",
     imgPath: "assets/images/orbit/img5.svg",
     heroImgPath: "assets/images/orbit/img5.svg",
     tools: ["Notion", "Google Sheets"],
@@ -145,7 +145,7 @@ export const PROJECTS: ProjectCard[] = [
     label: "Detecting Objects using Bipartite Matching",
     role: "Computer Vision",
     description:
-      "Implemented classical CV pipelines from scratch, including filtering, edge detection, and basic recognition.",
+      "Matching object detections across video frames with Hungarian algorithm.",
     link: "/projects/BipartiteMatching",
     imgPath: "assets/images/orbit/img10.svg",
     heroImgPath: "assets/images/orbit/img10.svg",
@@ -158,7 +158,7 @@ export const PROJECTS: ProjectCard[] = [
     label: "Band",
     role: "Electric Guitarist",
     description:
-      "Extended the toolkit with feature extraction, matching, and deep learning experiments for image classification.",
+      "Checkout our Instagram!",
     link: "https://www.instagram.com/band_orbit_nyc/",
     imgPath: "assets/images/orbit/img11.svg",
     heroImgPath: "assets/images/orbit/img11.svg",

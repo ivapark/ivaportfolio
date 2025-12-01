@@ -1,109 +1,84 @@
-/* GLOBAL FONT */
-body {
-    font-family: "Kufam", sans-serif !important;
-    color: #000;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
+.mp-page {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
 
-  }
-  
-  /* Optional page wrapper */
-  .mp-page {
-    background-color: #fff;
-  }
-  
-  /* VIDEO STYLE */
-  .mp-video {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 12px;
-  }
-  
-  /* TYPOGRAPHY SCALE */
-  .mp-title {
-    font-family: "Kufam", sans-serif !important;
-    font-size: 52px !important;
-    font-weight: 400;
-    color: #4f0d81;
-    width: 400%;
-  }
-  
-  .mp-subtitle {
-    font-size: 32px !important;
-    font-weight: 300 !important;
-    margin-bottom: 3.5rem;
-    color: #000;
-  }
-  
-  .mp-main-text {
-    font-size: 24px !important;
-    font-weight: 300 !important;
-    font-family: "Inria Sans", sans-serif;
-  }
-  
-  .mp-small-text {
-    font-size: 16px;
-    font-weight: 300 !important;
-  }
-  
-  /* Hero layout container */
-  .mp-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    padding: 4rem 6rem;
-    max-width: 1200px;
-    margin: -10px auto;
-    background-color: #fff;
-  }
-  
-  /* Text section */
-  .mp-text-section {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    margin-top: 0;
-  }
-  
-  .mp-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    margin-top: 0rem;
-  }
-  
-  .mp-info-line {
-    font-weight: lighter;
-    max-width: 90%;
-    line-height: 1.5;
-  }
-  
-  .mp-info-line span {
-    font-weight: normal;
-  }
-  
-  /* Image section */
-  .mp-image-section {
-    flex: 3;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 240px;
-    max-width: 500px !important;
-  }
-  
-  /* Image styling */
-  .mpd-hero-image,
-  .mp-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 12px;
-  }
+/* HERO TYPOGRAPHY */
+.mpw-title {
+  font-family: "Kufam", sans-serif !important;
+  font-size: 48px !important;
+  font-weight: 700;
+  color: #4f0d81;
+  max-width: 700px;
+}
+
+.mpw-subtitle {
+  font-family: "Kufam", sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 400;
+  color: #4f0d81;
+  margin-top: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.mpw-italic {
+  font-style: italic;
+}
+
+.mpw-main-text {
+  font-family: "Kufam", sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  color: #111111;
+}
+
+.mpw-info-label {
+  font-weight: 600;
+}
+
+/* HERO LAYOUT */
+.mpw-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 9rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.mpw-text-section {
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mpw-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 650px;
+}
+
+.mpw-info-line {
+  line-height: 1.7;
+}
+
+/* HERO IMAGE SIDE */
+.mpw-image-section {
+  flex-shrink: 0;
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mpw-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  object-fit: cover;
+  margin-top: 200px;
+}
   
   /* Competitive Analysis Section */
   .analysis-section {

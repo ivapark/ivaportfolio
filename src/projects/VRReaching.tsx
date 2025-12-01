@@ -31,8 +31,8 @@ const VRReaching: React.FC = () => {
 
             <p className="vr-main-text vr-info-line">
               <span className="vr-info-label">Toolkit:&nbsp;</span>
-              HTC Vive Focus 3, Unity 2022.3 (C# + XR Interaction Toolkit
-              3.1.1), SteamVR/OpenXR, custom CSV motion logging, and MATLAB
+              HTC Vive Focus 3, Unity (C# + XR Interaction Toolkit
+              3.1.1), SteamVR/OpenXR, and MATLAB
             </p>
           </div>
         </div>
