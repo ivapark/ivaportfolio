@@ -162,7 +162,7 @@ export const PROJECTS: ProjectCard[] = [
     link: "https://www.instagram.com/band_orbit_nyc/",
     imgPath: "assets/images/orbit/img11.svg",
     heroImgPath: "assets/images/orbit/img11.svg",
-    tools: ["Python", "PyTorch"],
+    tools: [],
     category: "hobby",
   },
 
