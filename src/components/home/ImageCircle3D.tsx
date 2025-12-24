@@ -1,10 +1,7 @@
 // src/components/home/ImageCircle3D.tsx
 import React, { useRef, useEffect, useState, useMemo } from "react";
 import "./ImageCircle3D.css";
-import {
-  PROJECTS,
-  ProjectCard as ProjectData,
-} from "../../data/projects";
+import { PROJECTS, ProjectCard as ProjectData } from "../../data/projects";
 import { useNavigate } from "react-router-dom";
 
 const RADIUS = 300;
@@ -56,9 +53,7 @@ function computeRingPositions(radius: number): Vec3[] {
 // rotate so card faces outward from the sphere center
 function getCardRotation(pos: Vec3) {
   const outward = { ...pos };
-  const length = Math.sqrt(
-    outward.x ** 2 + outward.y ** 2 + outward.z ** 2
-  );
+  const length = Math.sqrt(outward.x ** 2 + outward.y ** 2 + outward.z ** 2);
   outward.x /= length;
   outward.y /= length;
   outward.z /= length;
@@ -71,30 +66,26 @@ function getCardRotation(pos: Vec3) {
 
 const ImageCircle3D: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const navigate = useNavigate();  
+  const navigate = useNavigate();
 
-  // rotation of the whole sphere
   const [rotation, setRotation] = useState({ x: 0, y: 45 });
-  const [activeProject, setActiveProject] =
-    useState<OrbitProject | null>(null);
+  const [activeProject, setActiveProject] = useState<OrbitProject | null>(null);
 
   // base path for GitHub Pages ("/ivaportfolio/") or "/" locally
   const assetBase = import.meta.env.BASE_URL;
 
-  // Take data from PROJECTS and resolve proper asset URLs
   const projects: OrbitProject[] = useMemo(
     () =>
       PROJECTS.map((p) => ({
         ...p,
         imgSrc: `${assetBase}${p.imgPath}`,
-        heroImgSrc: `${assetBase}${(p.heroImgPath ?? p.imgPath)}`,
+        heroImgSrc: `${assetBase}${p.heroImgPath ?? p.imgPath}`,
       })),
     [assetBase]
   );
 
   const positions = useMemo(() => computeRingPositions(RADIUS), []);
 
-  // trackpad / wheel → spin around Y *and* tilt in X
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -106,14 +97,23 @@ const ImageCircle3D: React.FC = () => {
       const { deltaX, deltaY } = e;
 
       setRotation((prev) => ({
-        x: clamp(prev.x + deltaY * 0.2, -80, 80), // up/down tilt
-        y: prev.y + deltaX * 0.2, // left/right spin
+        x: clamp(prev.x + deltaY * 0.2, -80, 80),
+        y: prev.y + deltaX * 0.2,
       }));
     };
 
     el.addEventListener("wheel", handleWheel, { passive: false });
     return () => el.removeEventListener("wheel", handleWheel);
   }, [activeProject]);
+
+  // ✅ one place to handle internal vs external
+  const openProjectLink = (p: OrbitProject) => {
+    if (p.external) {
+      window.open(p.link, "_blank", "noopener,noreferrer");
+      return;
+    }
+    navigate(p.link);
+  };
 
   return (
     <div ref={containerRef} className="orbit-root">
@@ -125,7 +125,6 @@ const ImageCircle3D: React.FC = () => {
         }}
       >
         {projects.map((project, idx) => {
-          // assuming positions.length >= projects.length
           const pos = positions[idx];
           const cardRot = getCardRotation(pos);
 
@@ -135,20 +134,18 @@ const ImageCircle3D: React.FC = () => {
               className="orbit-card-wrapper"
               style={{
                 transform: `translate3d(${pos.x}px, ${pos.y}px, ${pos.z}px)
-                rotateY(${cardRot.rotY+180 }deg)
+                rotateY(${cardRot.rotY + 180}deg)
                 rotateX(${cardRot.rotX}deg)`,
-
               }}
               onClick={() => {
                 console.log("CLICK", project.id, project.label);
                 setActiveProject(project);
               }}
             >
-              <div className="orbit-card"
-              style={{ animationDelay: `${idx * 80}ms` }}
+              <div
+                className="orbit-card"
+                style={{ animationDelay: `${idx * 80}ms` }}
               >
-                
-                {/* Front face (outward) */}
                 <div className="orbit-card-face">
                   <img
                     src={project.imgSrc}
@@ -157,7 +154,6 @@ const ImageCircle3D: React.FC = () => {
                   />
                 </div>
 
-                {/* Back face (inward, for when you're inside the sphere) */}
                 <div className="orbit-card-back">
                   <img
                     src={project.imgSrc}
@@ -186,7 +182,6 @@ const ImageCircle3D: React.FC = () => {
       {activeProject && (
         <div className="orbit-overlay">
           <div className="orbit-modal">
-            {/* close button in the top-right of the card */}
             <button
               type="button"
               className="orbit-modal-close"
@@ -196,19 +191,10 @@ const ImageCircle3D: React.FC = () => {
             </button>
 
             <div className="orbit-modal-grid">
-              {/* LEFT: text block */}
               <div className="orbit-modal-left">
-                <h2 className="orbit-modal-title">
-                  {activeProject.label}
-                </h2>
-
-                <div className="orbit-modal-role">
-                  {activeProject.role}
-                </div>
-
-                <p className="orbit-modal-body">
-                  {activeProject.description}
-                </p>
+                <h2 className="orbit-modal-title">{activeProject.label}</h2>
+                <div className="orbit-modal-role">{activeProject.role}</div>
+                <p className="orbit-modal-body">{activeProject.description}</p>
 
                 {activeProject.tools.length > 0 && (
                   <div className="orbit-modal-tools">
@@ -220,23 +206,19 @@ const ImageCircle3D: React.FC = () => {
                   </div>
                 )}
 
-                    <button
-                    type="button"
-                    className="orbit-modal-learn"
-                    onClick={() => {
-                        if (activeProject) {
-                        navigate(activeProject.link);  // "/projects/…"
-                        setActiveProject(null);        // optional: close modal
-                        }
-                    }}
-                    >
-                    Learn More →
-                    </button>
-
-                
+                <button
+                  type="button"
+                  className="orbit-modal-learn"
+                  onClick={() => {
+                    if (!activeProject) return;
+                    openProjectLink(activeProject); // handles external links
+                    setActiveProject(null);
+                  }}
+                >
+                  Learn More →
+                </button>
               </div>
 
-              {/* RIGHT: hero image / phone mockup */}
               <div className="orbit-modal-right">
                 <img
                   src={activeProject.heroImgSrc || activeProject.imgSrc}

@@ -1,5 +1,6 @@
 // src/data/projects.ts
 
+
 export type ProjectCategory = "experience" | "project" | "hobby" | "me";
 
 export type ProjectCard = {
@@ -9,6 +10,7 @@ export type ProjectCard = {
   role: string;
   description: string;
   link: string;
+  external?: boolean;
   imgPath: string;      // small orbit image
   heroImgPath?: string; // big image for detail / work page
   tools: string[];
@@ -160,10 +162,13 @@ export const PROJECTS: ProjectCard[] = [
     description:
       "Checkout our Instagram!",
     link: "https://www.instagram.com/band_orbit_nyc/",
+    external: true,
     imgPath: "assets/images/orbit/img11.svg",
     heroImgPath: "assets/images/orbit/img11.svg",
     tools: [],
     category: "hobby",
+
+    
   },
 
   // ========== HOBBIES ==========
