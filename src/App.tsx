@@ -6,6 +6,7 @@ import ScrollToTop from "./components/layout/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
 import AboutPage from "./pages/AboutPage";
+import ResumePage from "./pages/ResumePage";
 
 import MissPoppinsApp from "./projects/MissPoppinsApp";
 import MissPoppinsWebsite from "./projects/MissPoppinsWebsite";
@@ -37,6 +38,7 @@ const App: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/resume" element={<ResumePage />} />
 
         <Route path="/projects/MissPoppinsApp" element={<MissPoppinsApp />} />
         <Route path="/projects/MissPoppinsWebsite" element={<MissPoppinsWebsite />} />
