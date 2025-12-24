@@ -56,7 +56,7 @@
 
 /* Text section */
 .mpdash-text-section {
-  flex: 3;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0rem;
@@ -301,8 +301,8 @@
 /* Category heading */
 .mpdash-painpoint-heading {
   font-size: 22px;
-  color: #8e5dbc;
-  font-weight: 600;
+  color: #4f0d81;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
@@ -321,7 +321,7 @@
 
 .mpdash-painpoint-item p {
   font-size: 16px;
-  color: #555;
+  color: #2e2e2e;
   line-height: 1.4;
   margin: 0;
   font-weight: 400;
@@ -475,7 +475,7 @@
   font-family: "Kufam", sans-serif;
   font-size: 32px;
   font-weight: 300;
-  color: #7c3aed;
+  color: #4f0d81;
   margin-bottom: 2.5rem;
   text-align: left;
 }
@@ -532,7 +532,7 @@
 .mpdash-hmw-header {
   display: flex;
   justify-content: center;
-  gap: 27rem;
+  gap: 12rem;
   margin: 4rem 0 3rem;
   flex-wrap: wrap;
 }
@@ -542,7 +542,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: -60px;
+
 }
 
 .mpdash-hmw-subtitle {
@@ -614,7 +615,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: 3rem;
-  align-items: flex-start;
+  align-items: stretch;
   justify-items: center;
   margin-bottom: 8rem;
 }
@@ -625,6 +626,7 @@
   align-items: center;
   width: 100%;
   max-width: 420px;
+  height: 100%;
   text-align: left; /* or center if you prefer */
 }
 
@@ -645,7 +647,7 @@
   color: #333;
   line-height: 1.6;
   max-width: 380px;
-  margin: 0;              /* remove big top margins that were pushing text away */
+  margin-top: auto;
 }
 
 /* responsive tweak */
@@ -657,15 +659,6 @@
   .mpdash-hmw-column {
     max-width: 100%;
   }
-}
-
-.mpdash-hmw-description-before,
-.mpdash-hmw-description-before2 {
-  margin-top: 50px;
-}
-
-.mpdash-hmw-description-before2 {
-  margin-top: 90px;
 }
 
 /* WIREFRAMES */
@@ -694,6 +687,7 @@
   height: auto;
   border-radius: 8px;
 }
+
 
 .mpdash-wireframes-button {
   font-family: "Inria Sans", sans-serif;

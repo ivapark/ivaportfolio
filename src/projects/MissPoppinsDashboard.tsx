@@ -714,12 +714,12 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-hmw-feature">
           <img
-            src={base + "assets/misspoppinsdesktop/fileshare.svg"}
+            src={base + "assets/misspoppinsdesktop/payment.svg"}
             alt="Calendar Icon"
             className="mpdash-hmw-icon"
           />
           <span className="mpdash-hmw-feature-label">
-            2. Streamline File &amp; Data Management
+            2. Clear Payment &amp; Package
           </span>
         </div>
 
@@ -771,7 +771,7 @@ const MissPoppinsDashboard: React.FC = () => {
             className="mpdash-hmw-icon"
           />
           <span className="mpdash-hmw-feature-label">
-            1. Personalized Dashboard
+            1. All-in-One Messaging Hub
           </span>
         </div>
 
