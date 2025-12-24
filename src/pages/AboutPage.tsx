@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./AboutPage.css";
 
 const AboutPage: React.FC = () => {
@@ -228,12 +230,9 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
 
-            <a
-              href={`${assetBase}Work`}
-              className="skills-cta"
-            >
+            <Link to="/work" className="skills-cta">
               → Explore My Work
-            </a>
+            </Link>
           </div>
         </div>
       </section>
