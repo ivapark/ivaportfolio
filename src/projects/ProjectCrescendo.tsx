@@ -3,7 +3,6 @@ import React from "react";
 import "./ProjectCrescendo.css";
 
 const ProjectCrescendo: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="crescendo-page">
@@ -48,7 +47,7 @@ const ProjectCrescendo: React.FC = () => {
 
         <div className="crescendo-image-section">
           <img
-            src={base + "/assets/projectcrescendo/projectcrescendo.svg"}
+            src={"/assets/projectcrescendo/projectcrescendo.svg"}
             alt="Project Crescendo website on a laptop"
             className="crescendo-main-img"
           />

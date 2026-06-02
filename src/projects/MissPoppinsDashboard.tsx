@@ -7,7 +7,6 @@ const AFFINITY_IMAGES = [
   "affinity3.svg",
 ];
 const MissPoppinsDashboard: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
   const [affinityIndex, setAffinityIndex] = useState(0);
 
   const handlePrev = () => {
@@ -21,7 +20,7 @@ const MissPoppinsDashboard: React.FC = () => {
   };
 
   const affinitySrc =
-    base + "assets/misspoppinsdesktop/" + AFFINITY_IMAGES[affinityIndex];
+    "/assets/misspoppinsdesktop/" + AFFINITY_IMAGES[affinityIndex];
 
   return (
     <main className="mpdash-page">
@@ -59,7 +58,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-image-section">
           <img
-            src={base + "assets/misspoppinsdesktop/desktop1.svg"}
+            src={"/assets/misspoppinsdesktop/desktop1.svg"}
             alt="Dashboard Preview"
             className="mpdash-hero-image"
           />
@@ -81,7 +80,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-problem-with-text">
             <div className="mpdash-problem-image-wrapper">
               <img
-                src={base + "assets/misspoppinsdesktop/background1.svg"}
+                src={"/assets/misspoppinsdesktop/background1.svg"}
                 alt="Dashboard showing cluttered interface"
                 className="mpdash-problem-img"
               />
@@ -105,7 +104,7 @@ const MissPoppinsDashboard: React.FC = () => {
             </div>
             <div className="mpdash-problem-image-wrapper">
               <img
-                src={base + "assets/misspoppinsdesktop/background2.svg"}
+                src={"/assets/misspoppinsdesktop/background2.svg"}
                 alt="Availability setup interface"
                 className="mpdash-problem-img-wide"
               />
@@ -118,7 +117,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-problem-with-text">
             <div className="mpdash-problem-image-wrapper">
               <img
-                src={base + "assets/misspoppinsdesktop/background3.svg"}
+                src={"/assets/misspoppinsdesktop/background3.svg"}
                 alt="File storage interface"
                 className="mpdash-problem-img"
               />
@@ -151,7 +150,7 @@ const MissPoppinsDashboard: React.FC = () => {
               Intuitive for first-time users
             </p>
             <img
-              src={base + "assets/misspoppinsdesktop/icon1.svg"}
+              src={"/assets/misspoppinsdesktop/icon1.svg"}
               alt="Intuitive Design Icon"
             />
           </div>
@@ -162,7 +161,7 @@ const MissPoppinsDashboard: React.FC = () => {
               Accessible for older adults with limited tech confidence
             </p>
             <img
-              src={base + "assets/misspoppinsdesktop/icon2.svg"}
+              src={"/assets/misspoppinsdesktop/icon2.svg"}
               alt="Accessibility Icon"
             />
           </div>
@@ -173,7 +172,7 @@ const MissPoppinsDashboard: React.FC = () => {
               Clear in function, with reduced cognitive load
             </p>
             <img
-              src={base + "assets/misspoppinsdesktop/icon3.svg"}
+              src={"/assets/misspoppinsdesktop/icon3.svg"}
               alt="Clarity Icon"
             />
           </div>
@@ -201,7 +200,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
             <div className="mpdash-painpoint-item">
               <img
-                src={base + "assets/misspoppinsdesktop/calendar.svg"}
+                src={"/assets/misspoppinsdesktop/calendar.svg"}
                 alt="Calendar icon"
               />
               <p>
@@ -213,7 +212,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
             <div className="mpdash-painpoint-item">
               <img
-                src={base + "assets/misspoppinsdesktop/fileshare.svg"}
+                src={"/assets/misspoppinsdesktop/fileshare.svg"}
                 alt="File Sharing icon"
               />
               <p>
@@ -230,7 +229,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
             <div className="mpdash-painpoint-item">
               <img
-                src={base + "assets/misspoppinsdesktop/personalization.svg"}
+                src={"/assets/misspoppinsdesktop/personalization.svg"}
                 alt="Personalization icon"
               />
               <p>
@@ -242,7 +241,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
             <div className="mpdash-painpoint-item">
               <img
-                src={base + "assets/misspoppinsdesktop/payment.svg"}
+                src={"/assets/misspoppinsdesktop/payment.svg"}
                 alt="Payment icon"
               />
               <p>
@@ -259,7 +258,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
             <div className="mpdash-painpoint-item">
               <img
-                src={base + "assets/misspoppinsdesktop/communication.svg"}
+                src={"/assets/misspoppinsdesktop/communication.svg"}
                 alt="Communication icon"
               />
               <p>
@@ -291,7 +290,7 @@ const MissPoppinsDashboard: React.FC = () => {
               <div className="mpdash-user-avatar" key={i}>
                 <img
                   src={
-                    base + `assets/misspoppinsdesktop/user${i + 1}.svg`
+                    `/assets/misspoppinsdesktop/user${i + 1}.svg`
                   }
                   alt={`User ${i + 1}`}
                 />
@@ -342,7 +341,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-finding-item">
             <div className="mpdash-finding-icon-wrapper">
               <img
-                src={base + "assets/misspoppinsdesktop/calendar.svg"}
+                src={"/assets/misspoppinsdesktop/calendar.svg"}
                 alt="Calendar Icon"
                 className="mpdash-finding-icon-img"
               />
@@ -362,7 +361,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-finding-item">
             <div className="mpdash-finding-icon-wrapper">
               <img
-                src={base + "assets/misspoppinsdesktop/fileshare.svg"}
+                src={"/assets/misspoppinsdesktop/fileshare.svg"}
                 alt="Files Icon"
                 className="mpdash-finding-icon-img"
               />
@@ -389,7 +388,7 @@ const MissPoppinsDashboard: React.FC = () => {
             <div className="mpdash-finding-icon-wrapper">
               <img
                 src={
-                  base + "assets/misspoppinsdesktop/personalization.svg"
+                  "/assets/misspoppinsdesktop/personalization.svg"
                 }
                 alt="Dashboard Icon"
                 className="mpdash-finding-icon-img"
@@ -411,7 +410,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-finding-item">
             <div className="mpdash-finding-icon-wrapper">
               <img
-                src={base + "assets/misspoppinsdesktop/payment.svg"}
+                src={"/assets/misspoppinsdesktop/payment.svg"}
                 alt="Payment Icon"
                 className="mpdash-finding-icon-img"
               />
@@ -437,7 +436,7 @@ const MissPoppinsDashboard: React.FC = () => {
             <div className="mpdash-finding-icon-wrapper">
               <img
                 src={
-                  base + "assets/misspoppinsdesktop/communication.svg"
+                  "/assets/misspoppinsdesktop/communication.svg"
                 }
                 alt="Notification Icon"
                 className="mpdash-finding-icon-img"
@@ -466,14 +465,14 @@ const MissPoppinsDashboard: React.FC = () => {
         <div className="mpdash-hmw-header">
           <div className="mpdash-hmw-column">
             <img
-              src={base + "assets/misspoppinsapp/hmwproblem.svg"}
+              src={"/assets/misspoppinsapp/hmwproblem.svg"}
               alt="Problem Icon"
             />
             <h4 className="mpdash-hmw-subtitle">Problem</h4>
           </div>
           <div className="mpdash-hmw-column">
             <img
-              src={base + "assets/misspoppinsapp/hmwidea.svg"}
+              src={"/assets/misspoppinsapp/hmwidea.svg"}
               alt="Idea Icon"
             />
             <h4 className="mpdash-hmw-subtitle">How Might We</h4>
@@ -497,7 +496,7 @@ const MissPoppinsDashboard: React.FC = () => {
             experience to manage their clients efficiently.
           </div>
           <img
-            src={base + "assets/misspoppinsapp/yellowarrow.svg"}
+            src={"/assets/misspoppinsapp/yellowarrow.svg"}
             alt="Arrow"
             className="mpdash-hmw-arrow"
           />
@@ -521,7 +520,7 @@ const MissPoppinsDashboard: React.FC = () => {
             progress, and payment information.
           </div>
           <img
-            src={base + "assets/misspoppinsapp/yellowarrow.svg"}
+            src={"/assets/misspoppinsapp/yellowarrow.svg"}
             alt="Arrow"
             className="mpdash-hmw-arrow"
           />
@@ -550,7 +549,7 @@ const MissPoppinsDashboard: React.FC = () => {
             .
           </div>
           <img
-            src={base + "assets/misspoppinsapp/yellowarrow.svg"}
+            src={"/assets/misspoppinsapp/yellowarrow.svg"}
             alt="Arrow"
             className="mpdash-hmw-arrow"
           />
@@ -577,7 +576,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-hmw-feature">
           <img
-            src={base + "assets/misspoppinsdesktop/calendar.svg"}
+            src={"/assets/misspoppinsdesktop/calendar.svg"}
             alt="Calendar Icon"
             className="mpdash-hmw-icon"
           />
@@ -590,7 +589,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">Before</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/before1.svg"}
+              src={"/assets/misspoppinsdesktop/before1.svg"}
               alt="Before Screenshot"
               className="mpdash-hmw-image"
             />
@@ -606,7 +605,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">After</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/after1.svg"}
+              src={"/assets/misspoppinsdesktop/after1.svg"}
               alt="After Screenshot"
               className="mpdash-hmw-image"
             />
@@ -621,7 +620,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-hmw-feature">
           <img
-            src={base + "assets/misspoppinsdesktop/fileshare.svg"}
+            src={"/assets/misspoppinsdesktop/fileshare.svg"}
             alt="Calendar Icon"
             className="mpdash-hmw-icon"
           />
@@ -634,7 +633,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">Before</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/before2.svg"}
+              src={"/assets/misspoppinsdesktop/before2.svg"}
               alt="Before Screenshot"
               className="mpdash-hmw-image"
             />
@@ -649,7 +648,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">After</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/after2.svg"}
+              src={"/assets/misspoppinsdesktop/after2.svg"}
               alt="After Screenshot"
               className="mpdash-hmw-image"
             />
@@ -673,7 +672,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-hmw-feature">
           <img
-            src={base + "assets/misspoppinsdesktop/personalization.svg"}
+            src={"/assets/misspoppinsdesktop/personalization.svg"}
             alt="Calendar Icon"
             className="mpdash-hmw-icon"
           />
@@ -686,7 +685,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">Before</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/before3.svg"}
+              src={"/assets/misspoppinsdesktop/before3.svg"}
               alt="Before Screenshot"
               className="mpdash-hmw-image"
             />
@@ -700,7 +699,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">After</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/after3.svg"}
+              src={"/assets/misspoppinsdesktop/after3.svg"}
               alt="After Screenshot"
               className="mpdash-hmw-image"
             />
@@ -714,7 +713,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-hmw-feature">
           <img
-            src={base + "assets/misspoppinsdesktop/payment.svg"}
+            src={"/assets/misspoppinsdesktop/payment.svg"}
             alt="Calendar Icon"
             className="mpdash-hmw-icon"
           />
@@ -727,7 +726,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">Before</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/before4.svg"}
+              src={"/assets/misspoppinsdesktop/before4.svg"}
               alt="Before Screenshot"
               className="mpdash-hmw-image"
             />
@@ -742,7 +741,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">After</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/after4.svg"}
+              src={"/assets/misspoppinsdesktop/after4.svg"}
               alt="After Screenshot"
               className="mpdash-hmw-image"
             />
@@ -766,7 +765,7 @@ const MissPoppinsDashboard: React.FC = () => {
 
         <div className="mpdash-hmw-feature">
           <img
-            src={base + "assets/misspoppinsdesktop/communication.svg"}
+            src={"/assets/misspoppinsdesktop/communication.svg"}
             alt="Calendar Icon"
             className="mpdash-hmw-icon"
           />
@@ -779,7 +778,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">Before</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/before5.svg"}
+              src={"/assets/misspoppinsdesktop/before5.svg"}
               alt="Before Screenshot"
               className="mpdash-hmw-image"
             />
@@ -793,7 +792,7 @@ const MissPoppinsDashboard: React.FC = () => {
           <div className="mpdash-hmw-column">
             <h3 className="mpdash-hmw-subtitle">After</h3>
             <img
-              src={base + "assets/misspoppinsdesktop/after5.svg"}
+              src={"/assets/misspoppinsdesktop/after5.svg"}
               alt="After Screenshot"
               className="mpdash-hmw-image"
             />

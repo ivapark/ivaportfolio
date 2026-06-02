@@ -2,7 +2,6 @@ import React from "react";
 import "./ResumePage.css";
 
 const ResumePage: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="resume-page">

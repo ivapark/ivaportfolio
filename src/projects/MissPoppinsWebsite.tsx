@@ -3,7 +3,6 @@ import React from "react";
 import "./MissPoppinsWebsite.css";
 
 const MissPoppinsWebsite: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
   return (
     <main className="mpw-page">
       {/* HERO */}
@@ -36,7 +35,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
         <div className="mpw-image-section">
           <img
-            src={base + "/assets/misspoppinswebsite/misspoppinswebsitemain.svg"} // hero image
+            src={"/assets/misspoppinswebsite/misspoppinswebsitemain.svg"} // hero image
             alt="misspoppinswebsitemain"
             className="mpw-main-img"
           />
@@ -48,10 +47,7 @@ const MissPoppinsWebsite: React.FC = () => {
         <div className="analysis-container">
           <div className="analysis-image">
             <img
-              src={
-                base +
-                "/assets/misspoppinswebsite/competitive-analysis.svg"
-              }
+              src="/assets/misspoppinswebsite/something.svg"
               alt="Competitive Analysis Table"
             />
           </div>
@@ -90,7 +86,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="layout-image">
             <img
-              src={base + "/assets/misspoppinswebsite/homepage-layout.svg"}
+              src={"/assets/misspoppinswebsite/homepage-layout.svg"}
               alt="Home Page Sitemap Diagram"
             />
           </div>
@@ -170,12 +166,12 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="mission-images">
             <img
-              src={base + "/assets/misspoppinswebsite/joy.svg"}
+              src={"/assets/misspoppinswebsite/joy.svg"}
               alt="Joy Parenting Club website"
               className="m-image"
             />
             <img
-              src={base + "/assets/misspoppinswebsite/misspoppins.svg"}
+              src={"/assets/misspoppinswebsite/misspoppins.svg"}
               alt="MissPoppins website"
               className="m-image"
             />
@@ -196,7 +192,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="competitormission-image">
             <img
-              src={base + "/assets/misspoppinswebsite/competitormission.svg"}
+              src={"/assets/misspoppinswebsite/competitormission.svg"}
               alt="Competitor Mission Page"
             />
           </div>
@@ -220,7 +216,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="visualization-image">
             <img
-              src={base + "/assets/misspoppinswebsite/visualization.svg"}
+              src={"/assets/misspoppinswebsite/visualization.svg"}
               alt="Visualization"
             />
           </div>
@@ -240,7 +236,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="competitormission-image">
             <img
-              src={base + "/assets/misspoppinswebsite/competitorvisual.svg"}
+              src={"/assets/misspoppinswebsite/competitorvisual.svg"}
               alt="Competitor Visual Elements"
             />
           </div>
@@ -266,7 +262,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="visualization-image">
             <img
-              src={base + "/assets/misspoppinswebsite/professionalimage.svg"}
+              src={"/assets/misspoppinswebsite/professionalimage.svg"}
               alt="Professional Image"
             />
           </div>
@@ -291,7 +287,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="visualization-image">
             <img
-              src={base + "/assets/misspoppinswebsite/hooker.svg"}
+              src={"/assets/misspoppinswebsite/hooker.svg"}
               alt="Download CTA"
             />
           </div>
@@ -307,7 +303,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="competitormission-image">
             <img
-              src={base + "/assets/misspoppinswebsite/hookerlocation.svg"}
+              src={"/assets/misspoppinswebsite/hookerlocation.svg"}
               alt="Hooker Location"
             />
           </div>
@@ -325,7 +321,7 @@ const MissPoppinsWebsite: React.FC = () => {
 
           <div className="competitormission-image">
             <img
-              src={base + "/assets/misspoppinswebsite/upgrade3.svg"}
+              src={"/assets/misspoppinswebsite/upgrade3.svg"}
               alt="Upgraded App Store Visualization"
             />
           </div>
@@ -345,7 +341,7 @@ const MissPoppinsWebsite: React.FC = () => {
           <div className="fp-grid">
             <div className="fp-before">
               <img
-                src={base + "/assets/misspoppinswebsite/final_before.svg"}
+                src={"/assets/misspoppinswebsite/final_before.svg"}
                 alt="Before page"
                 className="fp-before-img"
               />
@@ -353,12 +349,12 @@ const MissPoppinsWebsite: React.FC = () => {
 
             <div className="fp-after">
               <img
-                src={base + "/assets/misspoppinswebsite/final_after1.svg"}
+                src={"/assets/misspoppinswebsite/final_after1.svg"}
                 alt="After mobile screen 1"
                 className="fp-phone"
               />
               <img
-                src={base + "/assets/misspoppinswebsite/final_after2.svg"}
+                src={"/assets/misspoppinswebsite/final_after2.svg"}
                 alt="After mobile screen 2"
                 className="fp-phone"
               />

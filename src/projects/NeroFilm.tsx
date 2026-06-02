@@ -2,7 +2,6 @@ import React from "react";
 import "./NeroFilm.css";
 
 const NeroFilm: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="nerofilm-page">
@@ -46,7 +45,7 @@ const NeroFilm: React.FC = () => {
 
         <div className="nerofilm-image-section">
           <img
-            src={base + "/assets/NeroFilm/NeroFilmmain.svg"}
+            src={"/assets/NeroFilm/NeroFilmmain.svg"}
             alt="NeroFilm photobooth web UI on a laptop"
             className="nerofilm-main-img"
           />
@@ -60,7 +59,7 @@ const NeroFilm: React.FC = () => {
         <div className="nerofilm-about-inner">
           <div className="nerofilm-about-image">
             <img
-              src={base + "/assets/NeroFilm/film.svg"}
+              src={"/assets/NeroFilm/film.svg"}
               alt="Black and white NeroFilm photobooth strip"
             />
           </div>

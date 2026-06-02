@@ -2,7 +2,6 @@ import React from "react";
 import "./MLasl.css";
 
 const MLasl: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="asl-page">
@@ -49,7 +48,7 @@ const MLasl: React.FC = () => {
 
         <div className="asl-image-section">
           <img
-            src={base + "/assets/mlaslpictures/mlaslmain.svg"}
+            src={"/assets/mlaslpictures/mlaslmain.svg"}
             alt="ASL Demo"
             className="asl-main-img"
           />
@@ -68,7 +67,7 @@ const MLasl: React.FC = () => {
         <div className="asl-about-content">
           <div className="asl-about-img-wrapper">
             <img
-              src={base + "/assets/mlaslpictures/childsigning1.svg"}
+              src={"/assets/mlaslpictures/childsigning1.svg"}
               alt="Child Signing"
               className="asl-about-img"
             />
@@ -113,7 +112,7 @@ const MLasl: React.FC = () => {
 
         <div className="asl-chart-card">
           <img
-            src={base + "/assets/mlaslpictures/aslchart1.svg"}
+            src={"/assets/mlaslpictures/aslchart1.svg"}
             alt="ASL Alphabet Chart"
             className="asl-chart-img"
           />
@@ -126,7 +125,7 @@ const MLasl: React.FC = () => {
 
         <video className="asl-demo-video" controls>
           <source
-            src={base + "/assets/mlaslpictures/ML_ASL_demo.mp4"}
+            src={"/assets/mlaslpictures/ML_ASL_demo.mp4"}
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -145,7 +144,7 @@ const MLasl: React.FC = () => {
         <div className="asl-whatidid-content">
           <div className="asl-whatidid-img-wrapper">
             <img
-              src={base + "/assets/mlaslpictures/meworking.svg"}
+              src={"/assets/mlaslpictures/meworking.svg"}
               alt="Working on ASL Project"
               className="asl-whatidid-img"
             />

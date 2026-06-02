@@ -3,16 +3,15 @@ import React, { useState } from "react";
 import "./MissPoppinsApp.css";
 
 
-const base = import.meta.env.BASE_URL;
 const affinityImages = [
-  base + "assets/misspoppinsapp/image3.svg",
-  base + "assets/misspoppinsapp/image4.svg",
-  base + "assets/misspoppinsapp/image5.svg",
-  base + "assets/misspoppinsapp/image6.svg",
-  base + "assets/misspoppinsapp/image7.svg",
-  base + "assets/misspoppinsapp/image8.svg",
-  base + "assets/misspoppinsapp/image9.svg",
-  base + "assets/misspoppinsapp/image10.svg",
+  "/assets/misspoppinsapp/image3.svg",
+  "/assets/misspoppinsapp/image4.svg",
+  "/assets/misspoppinsapp/image5.svg",
+  "/assets/misspoppinsapp/image6.svg",
+  "/assets/misspoppinsapp/image7.svg",
+  "/assets/misspoppinsapp/image8.svg",
+  "/assets/misspoppinsapp/image9.svg",
+  "/assets/misspoppinsapp/image10.svg",
 
 
 
@@ -357,7 +356,7 @@ const MissPoppinsApp: React.FC = () => {
 
         <div className="mp-finding-postit-wrapper">
         <img
-          src={base + "/assets/misspoppinsapp/researchfindings1.svg"}
+          src={"/assets/misspoppinsapp/researchfindings1.svg"}
           alt="Finding Insight"
           className="mp-finding-postit1"
         />
@@ -925,7 +924,7 @@ const MissPoppinsApp: React.FC = () => {
         <div className="hmw4-top-row">
           <div className="hmw4-step">
             <img
-              src={base + "assets/misspoppinsapp/hmw4hand.svg"}
+              src={"/assets/misspoppinsapp/hmw4hand.svg"}
               alt="Mentorship Icon"
               className="hmw4-icon"
             />
@@ -937,7 +936,7 @@ const MissPoppinsApp: React.FC = () => {
 
           <div className="hmw4-step">
             <img
-              src={base + "assets/misspoppinsapp/hmw4chat.svg"}
+              src={"/assets/misspoppinsapp/hmw4chat.svg"}
               alt="Chat Icon"
               className="hmw4-icon"
             />

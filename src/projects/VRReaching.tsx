@@ -2,7 +2,6 @@ import React from "react";
 import "./VRReaching.css";
 
 const VRReaching: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="vr-page">
@@ -39,7 +38,7 @@ const VRReaching: React.FC = () => {
 
         <div className="vr-image-section">
           <img
-            src={base + "/assets/vr/vrmain.svg"} // hero image
+            src={"/assets/vr/vrmain.svg"} // hero image
             alt="Participant reaching in VR with HTC Vive Focus 3"
             className="vr-main-img"
           />
@@ -84,7 +83,7 @@ const VRReaching: React.FC = () => {
 
           <div className="vr-about-img-wrapper">
             <img
-              src={base + "/assets/vr/img1.svg"} // side photo from screenshot
+              src={"/assets/vr/img1.svg"} // side photo from screenshot
               alt="Participant seated and reaching in VR"
               className="vr-about-img"
             />

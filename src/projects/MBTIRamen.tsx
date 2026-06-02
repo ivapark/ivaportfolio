@@ -2,7 +2,6 @@ import React from "react";
 import "./MBTIRamen.css";
 
 const MBTIRamen: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="mbti-page">
@@ -46,7 +45,7 @@ const MBTIRamen: React.FC = () => {
 
         <div className="mbti-image-section">
           <img
-            src={base + "/assets/MBTIRamen/MBTIRamenmain.svg"}
+            src={"/assets/MBTIRamen/MBTIRamenmain.svg"}
             alt="MBTI Ramen result UI on a laptop"
             className="mbti-main-img"
           />
@@ -60,7 +59,7 @@ const MBTIRamen: React.FC = () => {
         <div className="mbti-about-inner">
           <div className="mbti-about-image">
             <img
-              src={base + "/assets/MBTIRamen/iloveramen.svg"}
+              src={"/assets/MBTIRamen/iloveramen.svg"}
               alt="Collage of ramen photos from my camera roll"
             />
           </div>
@@ -131,7 +130,7 @@ const MBTIRamen: React.FC = () => {
 
           <div className="mbti-logic-image">
             <img
-              src={base + "/assets/MBTIRamen/mbtikey.svg"}
+              src={"/assets/MBTIRamen/mbtikey.svg"}
               alt="MBTI personality types key"
             />
           </div>

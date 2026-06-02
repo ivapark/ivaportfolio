@@ -2,7 +2,6 @@ import React from "react";
 import "./MLweb.css";
 
 const MLweb: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="mlweb-page">
@@ -47,7 +46,7 @@ const MLweb: React.FC = () => {
 
         <div className="mlweb-image-section">
           <img
-            src={base + "/assets/MLweb/MLwebmain.svg"}
+            src={"/assets/MLweb/MLwebmain.svg"}
             alt="ASL Video Call UI"
             className="mlweb-main-img"
           />

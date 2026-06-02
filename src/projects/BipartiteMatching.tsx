@@ -2,7 +2,6 @@ import React from "react";
 import "./BipartiteMatching.css";
 
 const BipartiteMatching: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
 
   return (
     <main className="bip-page">
@@ -38,7 +37,7 @@ const BipartiteMatching: React.FC = () => {
 
         <div className="bip-image-section">
           <img
-            src={base + "/assets/bipartite/bipartitemain.svg"} 
+            src={"/assets/bipartite/bipartitemain.svg"} 
             alt="VIRAT frames with vehicle detections"
             className="bip-main-img"
           />
@@ -88,7 +87,7 @@ const BipartiteMatching: React.FC = () => {
         <div className="bip-about-gallery">
           <div className="bip-about-row">
             <img
-              src={base + "/assets/bipartite/img1.svg"}
+              src={"/assets/bipartite/img1.svg"}
               alt="VIRAT scene row 1 left"
               className="bip-about-img"
             />
@@ -96,7 +95,7 @@ const BipartiteMatching: React.FC = () => {
 
           <div className="bip-about-row">
             <img
-              src={base + "/assets/bipartite/img2.svg"}
+              src={"/assets/bipartite/img2.svg"}
               alt="VIRAT scene row 2 left"
               className="bip-about-img"
             />
@@ -104,7 +103,7 @@ const BipartiteMatching: React.FC = () => {
 
           <div className="bip-about-row">
             <img
-              src={base + "/assets/bipartite/img3.svg"}
+              src={"/assets/bipartite/img3.svg"}
               alt="VIRAT scene row 3 left"
               className="bip-about-img"
             />
